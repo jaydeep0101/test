@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56.121" height="33.743" viewBox="0 0 56.121 33.743">
+  <defs>
+    <filter id="Line_8" x="0" y="6.621" width="52.5" height="20.5" filterUnits="userSpaceOnUse">
+      <feOffset dx="-10" dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feFlood flood-color="#418dcb" flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Line_9" x="28.379" y="0" width="27.743" height="27.743" filterUnits="userSpaceOnUse">
+      <feOffset dx="-10" dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur-2"/>
+      <feFlood flood-color="#418dcb" flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Line_10" x="28.379" y="6" width="27.743" height="27.743" filterUnits="userSpaceOnUse">
+      <feOffset dx="-10" dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur-3"/>
+      <feFlood flood-color="#418dcb" flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_2181" data-name="Group 2181" transform="translate(19 2.121)">
+    <g transform="matrix(1, 0, 0, 1, -19, -2.12)" filter="url(#Line_8)">
+      <line id="Line_8-2" data-name="Line 8" x2="32" transform="translate(19 8.12)" fill="none" stroke="#001738" stroke-linecap="round" stroke-width="3"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -19, -2.12)" filter="url(#Line_9)">
+      <line id="Line_9-2" data-name="Line 9" x2="6" y2="6" transform="translate(48 2.12)" fill="none" stroke="#001738" stroke-linecap="round" stroke-width="3"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -19, -2.12)" filter="url(#Line_10)">
+      <line id="Line_10-2" data-name="Line 10" y1="6" x2="6" transform="translate(48 8.12)" fill="none" stroke="#001738" stroke-linecap="round" stroke-width="3"/>
+    </g>
+  </g>
+</svg>
