@@ -1,0 +1,372 @@
+// font
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face{
+    font-family:"PlayfairDisplay";
+    font-weight: 100;
+    src: url('../fonts/PlayfairDisplay-Regular.ttf');
+}
+@font-face{
+    font-family:"PlayfairDisplay";
+    font-weight: 500;
+    src: url('../fonts/PlayfairDisplay-Medium.ttf');
+}
+@font-face{
+    font-family:"PlayfairDisplay";
+    font-weight: 700;
+    src: url('../fonts/PlayfairDisplay-Bold.ttf');
+}
+@font-face{
+    font-family:"PlayfairDisplay";
+    font-weight: 900;
+    src: url('../fonts/PlayfairDisplay-ExtraBold.ttf');
+}
+
+$primary-font: 'poppins', sans-serif;
+$secondary-font: 'PlayfairDisplay';
+
+$heading-font: 'PlayfairDisplay';
+$body-font: 'poppins', sans-serif;
+
+
+// color
+$white:#ffffff;
+$black:#000000;
+
+:root{
+
+    --slider-filter: unset;
+
+    --box: rgba(255, 255, 255, 0.5);
+    
+    --primary-dark: #142C40;
+    --primary-light-dark: #00609A;
+    --primary: #418DCB;
+    --primary-light: #79BDFE;
+    
+    --bg: #ffffff;
+    --surface: #F3F5F8;
+
+    --cta: #141C24;
+    --cta-glass: #FAFBFD;
+    --cta-primary: #ffffff;
+    --cta-secondary: rgba(235, 245, 255, 0.80);
+
+    --border-one: rgba(0, 23, 56, 0.80);
+    --border-two: #418DCB;
+    
+    --primary-btn: #001738;
+    --secondary-btn: #ffffff;
+
+    --error: #EB3B5A;
+    --info: #2D98DA;
+    --warning: #fa8231;
+    --success: #20BF6B;
+
+    --text-100: #001738;
+    --text-80: rgba(0, 23, 56, 0.8);
+    --text-60: rgba(0, 23, 56, 0.6);
+    --text-40: rgba(0, 23, 56, 0.4);
+
+    --gray-100: rgb(7, 20, 31);
+    --gray-90: rgba(7, 20, 31, 0.9);
+    --gray-80: rgba(7, 20, 31, 0.8);
+    --gray-70: rgba(7, 20, 31, 0.7);
+    --gray-60: rgba(7, 20, 31, 0.6);
+    --gray-50: rgba(7, 20, 31, 0.5);
+    --gray-40: rgba(7, 20, 31, 0.4);
+    --gray-30: rgba(7, 20, 31, 0.3);
+    --gray-20: rgba(7, 20, 31, 0.2);
+    --gray-10: rgba(7, 20, 31, 0.1);
+}
+.dark-version:root{
+
+    --slider-filter: brightness(0) invert(1);
+
+    --box: rgba(29, 36, 44, 0.5);
+    
+    --primary-dark: #ffffff;
+    --primary-light-dark: #00609A;
+    --primary-light: #418DCB;
+    --primary: #79BDFE;
+    
+    --bg: #12171D;
+    --surface: #1D242C;
+
+    --cta: #F4F6F8;
+    --cta-glass: #12171D;
+    --cta-primary: #001738;
+    --cta-secondary: rgba(0, 23, 56, 0.8);
+
+    --border-one: rgba(235, 245, 255, 0.8);
+    --border-two: #79BDFE;
+    
+    --primary-btn: #ffffff;
+    --secondary-btn: #001738;
+
+    --error: #FC5C65;
+    --info: #45AAF2;
+    --warning: #FD9644;
+    --success: #26DE81;
+
+    --text-100: #ffffff;
+    --text-80: rgba(235, 245, 255, 0.8);
+    --text-60: rgba(235, 245, 255, 0.6);
+    --text-40: rgba(235, 245, 255, 0.4);
+
+    --gray-100: rgb(255, 255, 255);
+    --gray-90: rgba(255, 255, 255, 0.9);
+    --gray-80: rgba(255, 255, 255, 0.8);
+    --gray-70: rgba(255, 255, 255, 0.7);
+    --gray-60: rgba(255, 255, 255, 0.6);
+    --gray-50: rgba(255, 255, 255, 0.5);
+    --gray-40: rgba(255, 255, 255, 0.4);
+    --gray-30: rgba(255, 255, 255, 0.3);
+    --gray-20: rgba(255, 255, 255, 0.2);
+    --gray-10: rgba(255, 255, 255, 0.1);
+}
+
+@mixin padding-x {
+    padding: 0 60px;
+    @include max-991{
+        padding: 0 30px;
+    }
+}
+@mixin padding-y {
+    padding: 40px 0;
+    @include max-991{
+        padding: 20px 0;
+    }
+}
+@mixin padding-xy {
+    padding: 40px 60px;
+    @include max-991{
+        padding: 20px 30px;
+    }
+}
+
+@mixin common-btn {
+    text-decoration: none;
+    background-color: rgb(95, 95, 243);
+    text-transform: uppercase;
+    font-size: 15px;
+    color: white;
+    @include center;
+}
+@mixin common-input {
+    padding: 8px 10px;
+    border: none;
+    background-color: white;
+    color: #000000;
+    &::placeholder{
+        color: #d3d3d3;
+    }
+}
+
+// mixin classes
+
+@mixin center {
+    @include flex;
+    @include align-items(center);
+    @include justify-content(center);
+}
+@mixin space-between {
+    @include flex;
+    @include justify-content(space-between);
+}
+@mixin space-between-center {
+    @include flex;
+    @include align-items(center);
+    @include justify-content(space-between);
+}
+@mixin space-around {
+    @include flex;
+    @include justify-content(space-around);
+}
+@mixin space-around-center {
+    @include flex;
+    @include align-items(center);
+    @include justify-content(space-around);
+}
+@mixin bg-cover-common {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@mixin absolute-common {
+    position: absolute;
+    content: '';
+}
+@mixin flex {
+    display:-webkit-flex;
+    display:-webkit-box;
+    display:-moz-flex;
+    display:-moz-box;
+    display:-ms-flexbox;
+    display:flex;
+}
+@mixin  justify-content($value) {
+    -webkit-justify-content: ($value);
+    -moz-justify-content: ($value);
+    -ms-justify-content: ($value);
+    -o-justify-content: ($value);
+    justify-content: ($value);
+}
+@mixin align-items($value) {
+    -webkit-align-items: ($value);
+    -moz-align-items: ($value);
+    -ms-align-items: ($value);
+    -o-align-items: ($value);
+    align-items: ($value);
+}
+@mixin flex-direction($value) {
+    -webkit-flex-direction: ($value);
+    -moz-flex-direction: ($value);
+    -ms-flex-direction: ($value);
+    -o-flex-direction: ($value);
+    flex-direction: ($value);
+}
+@mixin flex-wrap($value) {
+    -webkit-flex-wrap: ($value);
+    -moz-flex-wrap: ($value);
+    -ms-flex-wrap: ($value);
+    -o-flex-wrap: ($value);
+    flex-wrap: ($value);
+}
+@mixin flex-grow($value) {
+    -webkit-flex-grow: ($value);
+    -moz-flex-grow: ($value);
+    -ms-flex-grow: ($value);
+    -o-flex-grow: ($value);
+    flex-grow: ($value);
+}
+@mixin flex-shrink($value) {
+    -webkit-flex-shrink: ($value);
+    -moz-flex-shrink: ($value);
+    -ms-flex-shrink: ($value);
+    -o-flex-shrink: ($value);
+    flex-shrink: ($value);
+}
+@mixin flex-basis($value) {
+    -webkit-flex-basis: ($value);
+    -moz-flex-basis: ($value);
+    -ms-flex-basis: ($value);
+    -o-flex-basis: ($value);
+    flex-basis: ($value);
+}
+@mixin flex-flow($value) {
+    -webkit-flex-flow: ($value);
+    -moz-flex-flow: ($value);
+    -ms-flex-flow: ($value);
+    -o-flex-flow: ($value);
+    flex-flow: ($value);
+}
+@mixin border-radius($value) {
+    -webkit-border-radius:($value);
+    -moz-border-radius:($value);
+    -ms-border-radius:($value);
+    -o-border-radius:($value);
+    border-radius:($value);
+}
+@mixin transition($value) {
+    -webkit-transition: ($value);
+    -moz-transition: ($value);
+    -ms-transition: ($value);
+    -o-transition: ($value);
+    transition: ($value);
+}
+@mixin transform($value) {
+    -webkit-transform: ($value);
+    -moz-transform: ($value);
+    -ms-transform: ($value);
+    -o-transform: ($value);
+    transform: ($value);
+}
+
+@mixin box-shadow($value) {
+    -webkit-box-shadow: ($value);
+	-moz-box-shadow: ($value);
+	-ms-box-shadow: ($value);
+	-o-box-shadow: ($value);
+	box-shadow: ($value);
+}
+
+// media screen
+
+// 4K
+@mixin max-3840 {
+    @media screen and (max-width:3840px) {
+        @content;
+    }
+}
+// 2K
+@mixin max-2560 { 
+    @media screen and (max-width:2560px) {
+        @content;
+    }
+}
+// FHD
+@mixin max-1920 {    
+    @media screen and (max-width:1920px) {
+        @content;
+    }
+}
+
+// Desktop
+@mixin max-1440 {
+    @media screen and (max-width:1440px) {
+        @content;
+    }
+}
+@mixin max-1366 {
+    @media screen and (max-width:1366px) {
+        @content;
+    }
+}
+@mixin max-1199 {
+    @media screen and (max-width:1199px) {
+        @content;
+    }
+}
+@mixin max-1024 {
+    @media screen and (max-width:1024px) {
+        @content;
+    }
+}
+@mixin max-991 {
+    @media screen and (max-width:991px) {
+        @content;
+    }
+}
+@mixin max-768 {
+    @media screen and (max-width:768px) {
+        @content;
+    }
+}
+@mixin max-767 {
+    @media screen and (max-width:767px) {
+        @content;
+    }
+}
+@mixin max-575 {
+    @media screen and (max-width:575px) {
+        @content;
+    }
+}
+@mixin max-420 {
+    @media screen and (max-width:420px) {
+        @content;
+    }
+}
+@mixin max-360 {
+    @media screen and (max-width:360px) {
+        @content;
+    }
+}
+@mixin max-320 {
+    @media screen and (max-width:320px) {
+        @content;
+    }
+}
+
