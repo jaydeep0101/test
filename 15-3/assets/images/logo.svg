@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="518.5" height="106" viewBox="0 0 518.5 106">
+  <g id="Gateway__normal_" data-name="Gateway_[normal]" transform="translate(-18.5 -13.205)">
+    <text id="ATEWAY" transform="translate(128 99.205)" fill="#418dcb" font-size="95" font-family="ArialMT, Arial" letter-spacing="0.016em"><tspan x="0" y="0">ATEWAY</tspan></text>
+    <g id="Group_1" data-name="Group 1" transform="translate(19 18)">
+      <path id="Path_1" data-name="Path 1" d="M24.622,90.824A41.368,41.368,0,0,1,30.8,69.041l1.515-2.471L27.572,63.4l-1.515,2.471a47.552,47.552,0,0,0,.159,50.112l1.555,2.429,4.745-3.171-1.555-2.429A41.053,41.053,0,0,1,24.622,90.824Z" transform="translate(-19 -45.299)" fill="#418dcb" stroke="#418dcb" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_2" data-name="Path 2" d="M87.7,26.373a38.706,38.706,0,0,1,14.433-2.751,39.132,39.132,0,0,1,18.141,4.466l2.512,1.316,2.632-4.984L122.911,23.1a44.827,44.827,0,0,0-37.28-1.954L83,22.186l2.073,5.263Z" transform="translate(-57.482 -18)" fill="#418dcb" stroke="#418dcb" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_3" data-name="Path 3" d="M52.062,98.913a27.989,27.989,0,0,1,4.426-15.151L58,81.37,53.258,78.3l-1.515,2.392a33.7,33.7,0,0,0,.12,36.6l1.555,2.352,4.745-3.07-1.555-2.352A27.771,27.771,0,0,1,52.062,98.913Z" transform="translate(-35.475 -53.383)" fill="#418dcb" stroke="#418dcb" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_4" data-name="Path 4" d="M77.508,120.433l1.555,2.352,4.7-3.07-1.555-2.352a17.1,17.1,0,0,1-.12-18.54l1.515-2.392L78.864,93.4l-1.515,2.392a22.734,22.734,0,0,0,.159,24.64Z" transform="translate(-51.951 -62.462)" fill="#418dcb" stroke="#418dcb" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_5" data-name="Path 5" d="M139.849,120.074H104.6a4.775,4.775,0,1,0,.159,5.622H139.73a39.069,39.069,0,0,1-54.145,33.133l-2.592-1.116L80.8,162.9l2.592,1.116a44.031,44.031,0,0,0,17.424,3.509,44.745,44.745,0,0,0,44.576-41.865l.08-2.831v-2.831h-5.622Z" transform="translate(-56.16 -76.505)" fill="#418dcb" stroke="#418dcb" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+  </g>
+</svg>
