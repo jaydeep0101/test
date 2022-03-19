@@ -1,0 +1,215 @@
+<section class="service-section">
+                <div class="container">
+                    <div class="col-lg-12">
+                        <div class="wrd-section-title-wrapper text-center wow fadeInUp" data-wow-duration="1.25s">
+                            <div class="wrd-section-title-content">
+                                <span class="wrd-section-subtitle">{{ section.settings.subtitle }}</span>
+                                <h2 class="wrd-section-title"> {{ section.settings.title }} </h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row wrd-service-wrapper">
+                      {% for block in section.blocks %}
+      					{% assign list_collection = collections[block.settings.my_collection_list] %}
+                        <div class="col-lg-6">
+                            <div class="single-service-item wow fadeInUp" data-wow-duration="1.25s">
+                                <img src="{{ block.settings.my_collection_list | img_url: 'master' }}" alt="service">
+
+                                <div class="service-box-content">
+                                    <div class="wrd-table-cell">
+                                        <h3 class="service-title"> {{ list_collection.title }} </h3>
+                                        <p> {{ list_collection.description }} </p>
+                                        <a href="{{list_collection.url }}" class="wrd-service-button">{{ section.settings.productbutton }} <i
+                                                class="flaticon-double-left-chevron"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      {% endfor %}
+                       <div class="col-lg-6">
+                            <div class="row">
+                           
+                                <div class="col-lg-6 col-md-6">
+                                   {%- assign collection = collections[section.settings.collection_one] -%}
+                         
+                                    <div class="single-service-item wow fadeInUp" data-wow-duration="1.25s">
+                                        <img src="{{ section.settings.collection_one | img_url: 'master' }}" alt="service">
+                                        <div class="service-box-content">
+                                            <div class="wrd-table-cell">
+                                                <h3 class="service-title">{{ collection.title  }}</h3>
+                                                <p>{{ collection.description }}</p>
+                                                <a href="{{ collection.url }}" class="wrd-service-button">{{ section.settings.productbutton }}<i
+                                                        class="flaticon-double-left-chevron"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                              
+                              
+                                <div class="col-lg-6 col-md-6">
+                                   {%- assign collection = collections[section.settings.collection_two] -%}
+                                    <div class="single-service-item wow fadeInUp" data-wow-duration="1.25s">
+                                        <img src="{{section.settings.collection_two | img_url: 'master' }}" alt="service">
+                                        <div class="service-box-content">
+                                            <div class="wrd-table-cell">
+                                                <h3 class="service-title">{{ collection.title  }}</h3>
+                                                <p>{{ collection.description }}</p>
+                                                <a href="{{ collection.url }}" class="wrd-service-button">{{ section.settings.productbutton }} <i
+                                                        class="flaticon-double-left-chevron"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                  {%- assign collection = collections[section.settings.collection_three] -%}
+                                    <div class="single-service-item wow fadeInUp" data-wow-duration="1.25s">
+                                        <img src="{{section.settings.collection_three | img_url: 'master' }}" alt="service">
+                                        <div class="service-box-content">
+                                            <div class="wrd-table-cell">
+                                                <h3 class="service-title">{{ collection.title }}</h3>
+                                                <p>{{ collection.description }}</p>
+                                                <a href="{{ collection.url }}" class="wrd-service-button">{{ section.settings.productbutton }} <i
+                                                        class="flaticon-double-left-chevron"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                  {%- assign collection = collections[section.settings.collection_four] -%}
+                                    <div class="single-service-item wow fadeInUp" data-wow-duration="1.25s">
+                                        <img src="{{section.settings.collection_four | img_url: 'master' }}" alt="service">
+                                        <div class="service-box-content">
+                                            <div class="wrd-table-cell">
+                                                <h3 class="service-title">{{ collection.title }}</h3>
+                                                <p>{{ collection.description }}</p>
+                                                <a href="{{ collection.url }}" class="wrd-service-button"> {{ section.settings.productbutton }} <i
+                                                        class="flaticon-double-left-chevron"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        <div class="col-lg-12 text-center wow fadeInUp service-more-button" data-wow-duration="1.25s">
+                            <a class="wrd-button" href="{{ section.settings.newarrivelbuttonlink }}"> {{ section.settings.newarrivelbutton }} <i class="flaticon-double-right-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+{% schema %}
+  {
+    "name": "qt-service",
+    "settings": [
+		{
+			"type": "text",
+			"id": "subtitle",
+			"label": "Sub Title"
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title"
+		},
+		{
+			"type": "text",
+			"id": "producttitle",
+			"label": "Product Title"
+		},
+		{
+			"type": "text",
+			"id": "productcontent",
+			"label": "Product Content"
+		},
+		{
+			"type": "text",
+			"id": "productbutton",
+			"label": "Product btn Text"
+		},
+		{
+			"type": "text",
+			"id": "newarrivelbutton",
+			"label": "All Product button Text"
+		},
+		{
+			"type": "url",
+			"id": "newarrivelbuttonlink",
+			"label": "All Product button link"
+		},
+		{
+			"type": "image_picker",
+			"id": "mainimg",
+			"label": "Main Image"
+		},
+		{
+			"type": "image_picker",
+			"id": "brand1",
+			"label": "Brand1 Image"
+		},
+		{
+			"type": "image_picker",
+			"id": "brand2",
+			"label": "Brand2 Image"
+		},
+		{
+			"type": "image_picker",
+			"id": "brand3",
+			"label": "Brand3 Image"
+		},
+		{
+			"type": "image_picker",
+			"id": "brand4",
+			"label": "Brand4 Image"
+		},
+		{
+            "id": "collection_one",
+            "type": "collection",
+            "label": "Collection One"
+		},
+		{
+            "id": "collection_two",
+            "type": "collection",
+            "label": "Collection Two"
+		},
+		{
+            "id": "collection_three",
+            "type": "collection",
+            "label": "Collection Three"
+		},
+		{
+            "id": "collection_four",
+            "type": "collection",
+            "label": "Collection Four"
+		}
+	],
+	"presets": [
+		{
+			"name": "qt-service"
+		}
+	],
+	"blocks":[
+        {
+            "name":"Collection",
+            "type":"collection-section",
+			"limit":2,
+            "settings":[
+               {
+                  "type":"collection",
+                  "id":"my_collection_list",
+                  "label":"Home Product list"
+        	  }
+            ]
+        }
+    ]	
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

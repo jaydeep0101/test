@@ -1,0 +1,165 @@
+<section class="testimonial-section testimonial-layout-three">
+                <div class="testimonial-left-bg">
+                    <img src="{{ section.settings.testimonialimage | img_url: 'master' }}" alt="Testimonial">
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-7 offset-xl-5 col-lg-12">
+                            <div class="wrd-section-title-wrapper text-left wow fadeInUp" data-wow-duration="1.25s">
+                                <div class="wrd-section-title-content">
+                                    <span class="wrd-section-subtitle">{{ section.settings.subtitle }}</span>
+                                    <h2 class="wrd-section-title">{{ section.settings.title }}</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container p-0">
+                    <div class="row">
+                        <div class="col-xl-8 offset-xl-4 col-lg-12">
+                            <div class="row wrd-testimonial-slider-two wrd-vertical-testimonial-slider wow fadeInUp"
+                                 data-wow-duration="1.25s">
+                                <div class="col-lg-12">
+                                    <div class="wrd-testimonial-item">
+                                        <div class="wrd-testimonial-image wrd-cover-bg"
+                                             data-background="{{ section.settings.client1 | img_url: 'master' }}" style=" background: url( {{ section.settings.client1 | img_url: 'master' }} );">
+                                            <div class="wrd-testimonial-icon"><i class="flaticon-leaf-1"></i></div>
+                                        </div>
+
+                                        <div class="testimonial-two-content">
+                                            <div class="wrd-testimonial-two-desc">
+                                                <p>{{ section.settings.testidesc }}</p>
+                                            </div>
+
+                                            <div class="wrd-name-designation">
+                                                <h6 class="wrd-testimonial-name">{{ section.settings.clientname }}</h6>
+                                                <span class="wrd-testimonial-designation"> {{ section.settings.clientdesignation }} </span>
+                                            </div>
+
+                                            <div class="wrd-testimonial-content-icon">
+                                                <img src=" {{ section.settings.icon | img_url: 'master' }} " alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <div class="wrd-testimonial-item">
+                                        <div class="wrd-testimonial-image wrd-cover-bg"
+                                             data-background="{{ section.settings.client2 | img_url: 'master' }}" style=" background: url( {{ section.settings.client2 | img_url: 'master' }} );">
+                                            <div class="wrd-testimonial-icon"><i class="flaticon-leaf-1"></i></div>
+                                        </div>
+
+                                        <div class="testimonial-two-content">
+                                            <div class="wrd-testimonial-two-desc">
+                                                <p> {{ section.settings.testidesc }} </p>
+                                            </div>
+
+                                            <div class="wrd-name-designation">
+                                                <h6 class="wrd-testimonial-name">{{ section.settings.clientname }}</h6>
+                                                <span class="wrd-testimonial-designation">{{ section.settings.clientdesignation }}</span>
+                                            </div>
+
+                                            <div class="wrd-testimonial-content-icon">
+                                                <img src="{{ section.settings.icon | img_url: 'master' }}" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <div class="wrd-testimonial-item">
+                                        <div class="wrd-testimonial-image wrd-cover-bg"
+                                             data-background="{{ section.settings.client3 | img_url: 'master' }}" style=" background: url( {{ section.settings.client3 | img_url: 'master' }} );">
+                                            <div class="wrd-testimonial-icon"><i class="flaticon-leaf-1"></i></div>
+                                        </div>
+
+                                        <div class="testimonial-two-content">
+                                            <div class="wrd-testimonial-two-desc">
+                                                <p>{{ section.settings.testidesc }}</p>
+                                            </div>
+
+                                            <div class="wrd-name-designation">
+                                                <h6 class="wrd-testimonial-name">{{ section.settings.clientname }}</h6>
+                                                <span class="wrd-testimonial-designation">{{ section.settings.clientdesignation }}</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="wrd-testimonial-content-icon">
+                                            <img src="{{ section.settings.icon | img_url: 'master' }}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+{% schema %}
+  {
+    "name": "qt-testimonial-section",
+    "settings": [
+		{
+			"type": "image_picker",
+			"id": "testimonialimage",
+			"label": "Testimonials Image"
+		},
+		{
+			"type": "text",
+			"id": "subtitle",
+			"label": "Sub Title"
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title"
+		},
+		{
+			"type": "image_picker",
+			"id": "client1",
+			"label": "Client 1"
+		},
+		{
+			"type": "image_picker",
+			"id": "client2",
+			"label": "Client 2"
+		},
+		{
+			"type": "image_picker",
+			"id": "client3",
+			"label": "Client 3"
+		},
+		{
+			"type": "image_picker",
+			"id": "icon",
+			"label": "Contant Icon"
+		},
+		{
+			"type": "text",
+			"id": "testidesc",
+			"label": "Client description"
+		},
+		{
+			"type": "text",
+			"id": "clientname",
+			"label": "Client Name"
+		},
+		{
+			"type": "text",
+			"id": "clientdesignation",
+			"label": "Client Designation"
+		}
+	],
+	"presets": [
+		{
+			"name": "qt-testimonial-section"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

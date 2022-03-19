@@ -1,0 +1,71 @@
+<section class="instagram-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="wrd-section-title-wrapper text-center wow fadeInUp" data-wow-duration="1.25s">
+                            <div class="wrd-section-title-content">
+                                <span class="wrd-section-subtitle">{{ section.settings.subtitle }}</span>
+                                <h2 class="wrd-section-title"> {{ section.settings.title }} </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row instagram-item-wrapper">
+                    {%- for block in section.blocks -%}
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <a href="#" class="instagram-item wrd-cover-bg wow fadeInUp" data-wow-duration="1.25s"
+                           data-background="{{ block.settings.image | img_url: 'master' }}" style="background: url( {{ block.settings.image | img_url: 'master' }} ); background-size: cover;">
+                            <div class="instagram-icon wrd-transition">
+                                <div class="wrd-table-cell">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                   {%- endfor -%}
+               
+                </div>
+            </div>
+        </section>
+{% schema %}
+  {
+    "name": "qt-instagram",
+    "settings": [
+		{
+			"type": "text",
+			"id": "subtitle",
+			"label": "Sub Title"
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title"
+		}
+	],
+	"presets": [
+		{
+			"name": "qt-instagram"
+		}
+	],
+	"blocks": [
+		{
+			"name": "image",
+			"type": "custom",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "Instagram Image"
+				}
+			]
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

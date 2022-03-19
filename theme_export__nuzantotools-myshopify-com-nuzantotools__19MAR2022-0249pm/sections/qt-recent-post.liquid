@@ -1,0 +1,179 @@
+<section class="recent-post-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="wrd-section-title-wrapper text-center wow fadeInUp" data-wow-duration="1.25s">
+                                <div class="wrd-section-title-content">
+                                    <span class="wrd-section-subtitle"> {{ section.settings.subtitle }} </span>
+                                    <h2 class="wrd-section-title"> {{ section.settings.title }} </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">                     
+					
+                     {%- assign blog = blogs[section.settings.blog] -%}
+                         {%- for article in blog.articles limit: section.settings.post_limit -%}
+                        <div class="col-lg-6 wow fadeInUp" data-wow-duration="1.25s">
+                            <div class="single-post-item big-post">
+                              
+                                <a href="{{ article.url }}" class="post-thumbnail">
+                                   
+                                    <img src=" {{ article.image | img_url: 'master' }}" alt="image1">
+                                   
+                                </a>
+                               
+
+                                <div class="post-content">
+                                    <div class="post-meta">{{ article.content }} </div>
+
+                                    <a href="{{ article.url }}">
+                                        <h4 class="wrd-post-title wrd-transition"> {{ article.title }}</h4>
+                                    </a>
+                                    <p> {{ article.excerpt }}</p>
+
+                                    <a class="post-details-button" href="{{ article.url }}">  {{ section.settings.postbuttontext }}</a>
+                                </div>
+                            </div>
+                        </div>
+                       {% endfor %}
+                      
+                      <div class="col-lg-6">
+                            <div class="row">
+                              {%- assign blog_one = blogs[section.settings.blog_one] -%}
+                         	{%- for article in blog_one.articles limit: section.settings.post_limit -%}
+                                <div class="col-12 wow fadeInUp" data-wow-duration="1.25s">
+                                    <div class="single-post-item">
+                                        <a href="{{ article.url }}" class="post-thumbnail">
+                                            <img src="{{ article.image | img_url: 'master'  }}" alt="image2">
+                                        </a>
+
+                                        <div class="post-content">
+                                            <a href="{{ article.url }}">
+                                                <h4 class="wrd-post-title wrd-transition"> {{ article.title }}</h4>
+                                            </a>
+                                            <p>{{ article.content }}</p>
+
+                                            <a class="post-details-button" href="{{ article.url }}">{{ section.settings.postbuttontext }}</a>
+                                        </div>
+                                    </div>
+                                </div>
+								{% endfor %}
+                               
+                                {%- assign blog_2 = blogs[section.settings.blog_2] -%}
+                         	{%- for article in blog_2.articles limit: section.settings.post_limit -%}
+                              <div class="col-12 wow fadeInUp" data-wow-duration="1.25s">
+                                    <div class="single-post-item">
+                                        <a href="{{ article.url }}" class="post-thumbnail">
+                                            <img src="{{ article.image | img_url: 'master' }}" alt="image3">
+                                        </a>
+
+                                        <div class="post-content">
+                                            <a href="{{ article.url }}">
+                                                <h4 class="wrd-post-title wrd-transition">{{ article.title }}</h4>
+                                            </a>
+                                            <p>{{ article.content }}</p>
+
+                                            <a class="post-details-button" href="{{ article.url }}">{{ section.settings.postbuttontext }}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                              {% endfor %}
+                              
+                                {%- assign blog_3 = blogs[section.settings.blog_3] -%}
+                         	{%- for article in blog_3.articles limit: section.settings.post_limit -%}
+                              <div class="col-12 wow fadeInUp" data-wow-duration="1.25s">
+                                    <div class="single-post-item">
+                                        <a href="{{ article.url }}" class="post-thumbnail">
+                                            <img src="{{ article.image | img_url: 'master' }}" alt="image4">
+                                        </a>
+
+                                        <div class="post-content">
+                                            <a href="{{ article.url }}">
+                                                <h4 class="wrd-post-title wrd-transition">{{ article.title }}</h4>
+                                            </a>
+                                            <p>{{ article.content }}</p>
+
+                                            <a class="post-details-button" href="{{ article.url }}">{{ section.settings.postbuttontext }}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                               {% endfor %}
+                            </div>
+                        </div> 
+                       
+
+					
+
+                        <div class="col-12 all-post-button text-center wow fadeInUp" data-wow-duration="1.25s">
+                            <a class="wrd-button" href="{{ section.settings.Mainbuttonlink }}"> {{ section.settings.Mainbutton }} <i class="flaticon-double-right-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+{% schema %}
+  {
+    "name": "qt-recent-post",
+    "settings": [
+		{
+			"type": "text",
+			"id": "subtitle",
+			"label": "Subtitle"
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title"
+		},
+		{
+			"type": "text",
+			"id": "postbuttontext",
+			"label": "Blog 1 button Text"
+		},
+		{
+			"type": "text",
+			"id": "Mainbutton",
+			"label": "Last Button"
+		},
+		{
+			"type": "url",
+			"id": "Mainbuttonlink",
+			"label": "Last Button Link"
+		},
+		{
+            "id": "blog",
+            "type": "blog",
+            "label": "Blog One"
+		},
+		{
+			"type": "blog",
+            "id": "blog_one",
+            "label": "Blog Two"
+		},
+		{
+            "type": "blog",
+			"id": "blog_2",
+            "label": "Blog Three"
+		},
+		{
+            "type": "blog",
+			"id": "blog_3",
+            "label": "Blog Four"
+		}
+    	
+	],
+	"presets": [
+		{
+			"name": "qt-recent-post"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,99 @@
+<div class="promo-section">
+  <div class="container-fluid">
+    <div class="row">
+      {% for block in section.blocks %}
+      {% assign list_collection = collections[block.settings.my_collection_list] %}
+      <div class="col-lg-6 p-0">
+        <div class="promo-image-wrapper">
+          <a href="{{ list_collection.url }}">
+            <img src=" {{ block.settings.my_collection_list | img_url: 'master' }} " alt="">
+          </a>
+
+          <div class="promo-content-wrapper {{ block.settings.wrapper_class }}">
+            <img src=" {{ block.settings.new_img | img_url: 'master' }} " alt="">
+            <h3 class="promo-title">{{ list_collection.title }}</h3>
+
+            <a class="wrd-button" href="{{ list_collection.url }}">{{ block.settings.btn }}<i class="flaticon-double-right-arrow"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "qt-promo-section",
+    "settings": [
+		{
+            "type":"collection",
+            "id":"my_product_list",
+            "label":"Home Product list"
+        },
+		{
+            "type":"collection",
+            "id":"my_product_list1",
+            "label":"Home Product list one"
+        },
+		
+		{
+			"type": "image_picker",
+			"id": "textimage2",
+			"label": "Text-Image 2"
+		},
+		{
+			"type": "text",
+			"id": "promotitle2",
+			"label": "Promo Title 2"
+		},
+		{
+			"type": "image_picker",
+			"id": "image2",
+			"label": "Image 2"
+		}
+	],
+	"presets": [
+		{
+			"name": "qt-promo-section"
+		}
+	],
+	"blocks":[
+        {
+            "name":"Collection",
+            "type":"collection-section",
+			"limit":2,
+            "settings":[
+               {
+                  "type":"collection",
+                  "id":"my_collection_list",
+                  "label":"Home Product list"
+        	  },
+			  {
+                  "type":"text",
+                  "id":"wrapper_class",
+                  "label":"Wrapper Class"
+        	  },
+   			  {
+                  "type":"text",
+                  "id":"btn",
+                  "label":"Button"
+        	  },
+			  {
+                  "type":"image_picker",
+                  "id":"new_img",
+                  "label":"Image"
+        	  }
+
+
+            ]
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
