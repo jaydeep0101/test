@@ -1,0 +1,273 @@
+<section class="about-section about-layout-three">
+                <div class="wrd-tabs-wrapper-three-wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-6 wrd-tab-image wow fadeInUp" data-wow-duration="1.25s">
+                                <ul class="nav nav-tabs" data-background="{{ section.settings.backgroundimage | img_url: 'master' }}" style=" background: url({{ section.settings.backgroundimage | img_url: 'master' }}); background-size: cover; background-position: center;">
+                                    <li>
+                                        <a data-toggle="tab" href="#tab-number-1" class="active">
+                                            <div class="wrd-tab-icon-wrapper wrd-font-icon">
+                                                <i aria-hidden="true" class="flaticon-shears"></i>
+                                            </div>
+                                            <span class="wrd-tab-menu-text wrd-transition"> {{ section.settings.mission }}</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a data-toggle="tab" href="#tab-number-2">
+                                            <div class="wrd-tab-icon-wrapper wrd-font-icon">
+                                                <i aria-hidden="true" class="flaticon-leaf-1"></i>
+                                            </div>
+                                            <span class="wrd-tab-menu-text wrd-transition"> {{ section.settings.vision }}</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a data-toggle="tab" href="#tab-number-3">
+                                            <div class="wrd-tab-icon-wrapper wrd-font-icon">
+                                                <i aria-hidden="true" class="flaticon-flower-pot-1"></i>
+                                            </div>
+                                            <span class="wrd-tab-menu-text wrd-transition"> {{ section.settings.goal }}</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="tab-content wow fadeInUp" data-wow-duration="1.25s">
+                                    <div id="tab-number-1" class="wrd-tab-item tab-pane fade in active show">
+                                        <div class="wrd-tab-content-wrapper">
+                                            <span class="wrd-tab-subtitle">{{ section.settings.subtitle }}</span>
+
+                                            <div class="tab-description">
+                                                <h3 class="wrd-tab-title">{{ section.settings.title }}</h3>
+
+                                                <p>{{ section.settings.text1 }}</p>
+
+                                                <strong>{{ section.settings.text2 }}</strong>
+                                            </div>
+
+                                            <div class="wrd-tab-count-box-wrapper">
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                                                        <div class="wrd-tab-counter-box">
+                                                            <div class="wrd-count-number-unit">
+                                                                <span class="wrd-count-number"> {{ section.settings.countnumber1 }} </span>
+                                                                <span class="wrd-count-unit">+</span>
+                                                            </div>
+                                                              <span class="wrd-count-title"> {{ section.settings.counttitle1 }}</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                                                        <div class="wrd-tab-counter-box">
+                                                            <div class="wrd-count-number-unit">
+                                                                <span class="wrd-count-number"> {{ section.settings.countnumber2 }}</span>
+                                                                <span class="wrd-count-unit">+</span>
+                                                            </div>
+                                                            <span class="wrd-count-title">{{ section.settings.counttitle2 }}</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                                                        <div class="wrd-tab-counter-box">
+                                                            <div class="wrd-count-number-unit">
+                                                                <span class="wrd-count-number"> {{ section.settings.countnumber3 }}</span>
+                                                                <span class="wrd-count-unit">+</span>
+                                                            </div>
+                                                            <span class="wrd-count-title"> {{ section.settings.counttitle3 }} </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="tab-number-2" class="wrd-tab-item tab-pane fade">
+                                        <div class="wrd-tab-content-wrapper">
+                                            <span class="wrd-tab-subtitle">{{ section.settings.subtitle }}</span>
+
+                                            <div class="tab-description">
+                                                <h3 class="wrd-tab-title">{{ section.settings.title }}</h3>
+
+                                                <p>{{ section.settings.text1 }}</p>
+
+                                                <strong>{{ section.settings.text2 }}</strong>
+                                            </div>
+
+                                            <div class="wrd-tab-count-box-wrapper">
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                                                        <div class="wrd-tab-counter-box">
+                                                            <div class="wrd-count-number-unit">
+                                                                <span class="wrd-count-number"> {{ section.settings.countnumber1 }}</span>
+                                                                <span class="wrd-count-unit">+</span>
+                                                            </div>
+                                                            <span class="wrd-count-title">{{ section.settings.counttitle1 }}</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                                                        <div class="wrd-tab-counter-box">
+                                                            <div class="wrd-count-number-unit">
+                                                                <span class="wrd-count-number"> {{ section.settings.countnumber2 }}</span>
+                                                                <span class="wrd-count-unit">+</span>
+                                                            </div>
+                                                            <span class="wrd-count-title">{{ section.settings.counttitle2 }}</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                                                        <div class="wrd-tab-counter-box">
+                                                            <div class="wrd-count-number-unit">
+                                                                <span class="wrd-count-number"> {{ section.settings.countnumber3 }}</span>
+                                                                <span class="wrd-count-unit">+</span>
+                                                            </div>
+                                                            <span class="wrd-count-title">{{ section.settings.counttitle3 }}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="tab-number-3" class="wrd-tab-item tab-pane fade">
+                                        <div class="wrd-tab-content-wrapper">
+                                            <span class="wrd-tab-subtitle">{{ section.settings.subtitle }}</span>
+
+                                            <div class="tab-description">
+                                                <h3 class="wrd-tab-title">{{ section.settings.title }}</h3>
+
+                                                <p>{{ section.settings.text1 }}</p>
+
+                                                <strong>{{ section.settings.text2 }}</strong>
+                                            </div>
+
+                                            <div class="wrd-tab-count-box-wrapper">
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                                                        <div class="wrd-tab-counter-box">
+                                                            <div class="wrd-count-number-unit">
+                                                                <span class="wrd-count-number"> {{ section.settings.countnumber1 }}</span>
+                                                                <span class="wrd-count-unit">+</span>
+                                                            </div>
+                                                            <span class="wrd-count-title">{{ section.settings.counttitle1 }}</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                                                        <div class="wrd-tab-counter-box">
+                                                            <div class="wrd-count-number-unit">
+                                                                <span class="wrd-count-number"> {{ section.settings.countnumber2 }}</span>
+                                                                <span class="wrd-count-unit">+</span>
+                                                            </div>
+                                                            <span class="wrd-count-title">{{ section.settings.counttitle2 }}</span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                                                        <div class="wrd-tab-counter-box">
+                                                            <div class="wrd-count-number-unit">
+                                                                <span class="wrd-count-number"> {{ section.settings.countnumber3 }}</span>
+                                                                <span class="wrd-count-unit">+</span>
+                                                            </div>
+                                                            <span class="wrd-count-title">{{ section.settings.counttitle3 }}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+{% schema %}
+  {
+    "name": "qt-about-section",
+    "settings": [
+		{
+			"type": "image_picker",
+			"id": "backgroundimage",
+			"label": "Background-Image"
+		},
+		{
+			"type": "text",
+			"id": "goal",
+			"label": "first image Title"
+		},
+		{
+			"type": "text",
+			"id": "mission",
+			"label": "second image Title"
+		},
+		{
+			"type": "text",
+			"id": "vision",
+			"label": "third image Title"
+		},
+		{
+			"type": "text",
+			"id": "countnumber1",
+			"label": "Number 1"
+		},
+		{
+			"type": "text",
+			"id": "countnumber2",
+			"label": "Number 2"
+		},
+		{
+			"type": "text",
+			"id": "countnumber3",
+			"label": "Number 3"
+		},
+		{
+			"type": "text",
+			"id": "counttitle1",
+			"label": "Count Title 1"
+		},
+		{
+			"type": "text",
+			"id": "counttitle2",
+			"label": "Count Title 2"
+		},
+		{
+			"type": "text",
+			"id": "counttitle3",
+			"label": "Count Title 3"
+		},
+		{
+			"type": "text",
+			"id": "subtitle",
+			"label": "Sub Title"
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title"
+		},
+		{
+			"type": "text",
+			"id": "text1",
+			"label": "Text 1"
+		},
+		{
+			"type": "text",
+			"id": "text2",
+			"label": "Text 2"
+		}
+	],
+	"presets": [
+		{
+			"name": "qt-about-section"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,89 @@
+<div class="brand-logo-image-wrapper">
+                    <div class="container">
+                        <div class="row align-items-center text-center">
+                            <div class="col-lg-2 col-md-2 col-6">
+                                <div class="brand-logo-image">
+                                    <img src="{{ section.settings.image1 | img_url: 'master' }}" alt="">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-6">
+                                <div class="brand-logo-image">
+                                    <img src="{{ section.settings.image2 | img_url: 'master' }}" alt="">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-6">
+                                <div class="brand-logo-image">
+                                    <img src="{{ section.settings.image3 | img_url: 'master' }}" alt="">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-6">
+                                <div class="brand-logo-image">
+                                    <img src="{{ section.settings.image4 | img_url: 'master' }}" alt="">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-6">
+                                <div class="brand-logo-image">
+                                    <img src="{{ section.settings.image5 | img_url: 'master' }}" alt="">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-6">
+                                <div class="brand-logo-image">
+                                    <img src="{{ section.settings.image6 | img_url: 'master' }}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+{% schema %}
+  {
+    "name": "qt-collection-brand-logo",
+    "settings": [
+		{
+			"type": "image_picker",
+			"id": "image1",
+			"label": "Logo-1"
+		},
+		{
+			"type": "image_picker",
+			"id": "image2",
+			"label": "Logo-2"
+		},
+		{
+			"type": "image_picker",
+			"id": "image3",
+			"label": "Logo-3"
+		},
+		{
+			"type": "image_picker",
+			"id": "image4",
+			"label": "Logo-4"
+		},
+		{
+			"type": "image_picker",
+			"id": "image5",
+			"label": "Logo-5"
+		},
+		{
+			"type": "image_picker",
+			"id": "image6",
+			"label": "Logo-6"
+		}
+	],
+	"presets": [
+		{
+			"name": "qt-collection-brand-logo"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

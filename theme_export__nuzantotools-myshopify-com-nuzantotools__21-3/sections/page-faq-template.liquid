@@ -1,0 +1,212 @@
+<section class="accordion-section " id="test1" {% unless product.handle == "variety-12-pack" %}style="display : none;"{% endunless %}>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="wrd-section-title-wrapper text-center">
+                                <div class="wrd-section-title-content">
+                                    <h2 class="wrd-section-title"> {{ section.settings.maintitle }}</h2>
+                                    <p> {{ section.settings.maintext }} </p>
+                                </div>
+                            </div>
+                        </div>
+                      
+                      <div class="col-lg-12">
+                            <div class="accordion-wrapper">
+                                <div id="accordion">
+  						
+                      {% for block in section.blocks %}
+                                  
+                                  
+                      
+                     	 <div class="card">
+                                        <div class="card-header" id="accordion-{{forloop.index}}">
+                                            <div class="accordion-title-and-image-wrapper" data-toggle="collapse" data-target="#collapse-{{forloop.index}}" aria-expanded="true" aria-controls="collapse-{{forloop.index}}">
+                                                <div class="accordion-title-image">
+                                                    <img src="{{ block.settings.image1 | img_url: 'master' }}" alt="image1">
+                                                </div>
+
+                                                <div class="accordion-title">
+                                                    <h6>{{ block.settings.faq_question }}</h6>
+                                                    <span>{{ block.settings.faq_subtitle }}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="collapse-{{forloop.index}}" class="collapse {% if forloop.index == 1 %} show {% endif %}" aria-labelledby="accordion-{{forloop.index}}" data-parent="#accordion">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-lg-9 col-md-9">
+                                                        <div class="accordion-content">
+                                                     {{ block.settings.faq_answer }}
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-3 col-md-3">
+                                                        <div class="ingredient-list">
+                                                            <img src="{{ block.settings.image2 | img_url: 'master' }}" alt="image2">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>         
+                      
+                      
+                      {%- endfor -%}
+                                  
+                                   </div>
+                            </div>
+                        </div>
+
+                  
+                      
+                    </div>
+                  
+                      
+					<!-- Logo Start-->
+                      <div class="brand-logo-image-wrapper">
+                    <div class="container">
+                        <div class="row align-items-center text-center">
+                            <div class="col-lg-2 col-md-2 col-6">
+                                <div class="brand-logo-image">
+                                    <img src="{{ section.settings.sugarimage | img_url: 'master' }}" alt="">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-6">
+                                <div class="brand-logo-image">
+                                    <img src="{{ section.settings.veganimage | img_url: 'master' }}" alt="">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-6">
+                                <div class="brand-logo-image">
+                                    <img src="{{ section.settings.plantimage | img_url: 'master' }}" alt="">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-6">
+                                <div class="brand-logo-image">
+                                    <img src="{{ section.settings.paleoimage | img_url: 'master' }}" alt="">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-6">
+                                <div class="brand-logo-image">
+                                    <img src="{{ section.settings.glutenimage | img_url: 'master' }}" alt="">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-6">
+                                <div class="brand-logo-image">
+                                    <img src="{{ section.settings.nongemoimage | img_url: 'master' }}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+					<!-- Logo End-->
+                </div>
+			</section>
+			
+{% schema %}
+  {
+    "name": "page-faq-template",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "expand_questions",
+        "label": "Expand all questions by default",
+        "default": false
+      },
+	  {
+		"type": "text",
+		"id": "maintitle",
+		"label": "Main Title"
+	  },
+	  {
+		"type": "text",
+		"id": "maintext",
+		"label": "Main Text"
+	  },
+{
+			"type": "image_picker",
+			"id": "sugarimage",
+			"label": "Image 1"
+		},
+		{
+			"type": "image_picker",
+			"id": "veganimage",
+			"label": "Image 2"
+		},
+		{
+			"type": "image_picker",
+			"id": "plantimage",
+			"label": "Image 3"
+		},
+		{
+			"type": "image_picker",
+			"id": "paleoimage",
+			"label": "Image 4"
+		},
+		{
+			"type": "image_picker",
+			"id": "glutenimage",
+			"label": "Image 5"
+		},
+		{
+			"type": "image_picker",
+			"id": "nongemoimage",
+			"label": "Image 6"
+		}
+  ],
+    "blocks": [
+      {
+        "type": "question",
+        "name": "Question",
+        "settings": [
+          {
+             "type":"text",
+             "id":"faq_question",
+             "label":"Question Name"
+          },
+          {
+             "type":"richtext",
+             "id":"faq_answer",
+             "label":"Answer of Question"
+          },
+		  {
+             "type":"text",
+             "id":"faq_subtitle",
+             "label":"Faq SubTitle"
+          },
+		  {
+            "type": "image_picker",
+            "id": "image1",
+            "label": "First Image"
+      	  },
+		  {
+            "type": "image_picker",
+            "id": "image2",
+            "label": "Second Image"
+      	  }
+		 
+
+
+        ]
+      }
+    ],
+	"presets": [
+		{
+			"name": "page-faq-template"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+
+{% endjavascript %}

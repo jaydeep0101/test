@@ -1,0 +1,141 @@
+<section class="wrd-home-three-slider-area">
+                <div class="wrd-home-slider-wrapper wrd-home-three-slider-wrapper wrd-cover-bg"
+                     data-background="{{ section.settings.bgimage | img_url: 'master' }}" style="background-image: url({{ section.settings.bgimage | img_url: 'master' }});">
+                    <div class="wrd-single-slide-item">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-xl-5 col-lg-8 col-sm-10">
+                                    <div class="wrd-slider-content-wrapper">
+                                        <div class="wrd-slide-title" data-animation="fadeInUp" data-delay=".5s">
+                                            <h2>{{ section.settings.title }}</h2>
+                                        </div>
+
+                                        <div class="wrd-slider-content-text" data-animation="fadeInUp" data-delay="1s">
+                                            <p>{{ section.settings.text }}</p>
+                                        </div>
+
+                                        <div class="slider-button-wrapper">
+                                            <a data-animation="fadeInUp" data-delay="1.5s" href="services.html"
+                                               class="wrd-button">All Services <i
+                                                    class="flaticon-double-left-chevron"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wrd-slider-right-image wrd-slider-right-image-1" data-animation="fadeInRight"
+                             data-delay="1.5s">
+                            <img src=" {{ section.settings.image1 | img_url: 'master' }} " alt="Slider">
+                        </div>
+                    </div>
+
+                    <div class="wrd-single-slide-item">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-xl-5 col-lg-8 col-sm-10">
+                                    <div class="wrd-slider-content-wrapper">
+                                        <div class="wrd-slide-title" data-animation="fadeInUp" data-delay=".5s">
+                                            <h2>Perfect Landscape Solution.</h2>
+                                        </div>
+
+                                        <div class="wrd-slider-content-text" data-animation="fadeInUp" data-delay="1s">
+                                            <p>It is a long established fact that reader will distracted readable
+                                                content of a page when looking its layout.</p>
+                                        </div>
+
+                                        <div class="slider-button-wrapper">
+                                            <a data-animation="fadeInUp" data-delay="1.5s" href="services.html"
+                                               class="wrd-button">All Services <i
+                                                    class="flaticon-double-left-chevron"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wrd-slider-right-image wrd-slider-right-image-2" data-animation="fadeInRight"
+                             data-delay="1s">
+                            <img src="{{ section.settings.image2 | img_url: 'master' }}" alt="Slider">
+                        </div>
+                    </div>
+
+                    <div class="wrd-single-slide-item">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-xl-5 col-lg-8 col-sm-10">
+                                    <div class="wrd-slider-content-wrapper">
+                                        <div class="wrd-slide-title" data-animation="fadeInUp" data-delay=".5s">
+                                            <h2>Perfect Landscape Solution.</h2>
+                                        </div>
+
+                                        <div class="wrd-slider-content-text" data-animation="fadeInUp" data-delay="1s">
+                                            <p>It is a long established fact that reader will distracted readable
+                                                content of a page when looking its layout.</p>
+                                        </div>
+
+                                        <div class="slider-button-wrapper">
+                                            <a data-animation="fadeInUp" data-delay="1.5s" href="services.html"
+                                               class="wrd-button">All Services <i
+                                                    class="flaticon-double-left-chevron"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrd-slider-right-image wrd-slider-right-image-3" data-animation="fadeInRight"
+                             data-delay="1s">
+                            <img src="{{ section.settings.image3 | img_url: 'master' }}" alt="Slider">
+                        </div>
+                    </div>
+                </div>
+            </section>
+{% schema %}
+  {
+    "name": "qt-banner",
+    "settings": [
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title"
+		},
+		{
+			"type": "text",
+			"id": "text",
+			"label": "Text"
+		},
+		{
+			"type": "image_picker",
+			"id": "bgimage",
+			"label": "background Image"
+		},
+		{
+			"type": "image_picker",
+			"id": "image1",
+			"label": "first image"
+		},
+		{
+			"type": "image_picker",
+			"id": "image2",
+			"label": "Second image"
+		},
+		{
+			"type": "image_picker",
+			"id": "image3",
+			"label": "Third image"
+		}
+	],
+
+	"presets": [
+		{
+			"name": "qt-banner"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

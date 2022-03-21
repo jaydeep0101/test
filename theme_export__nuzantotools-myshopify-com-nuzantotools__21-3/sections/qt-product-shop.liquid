@@ -1,0 +1,48 @@
+<div class="shop-section">
+                <div class="container-fluid p-0">
+                    <div class="row">
+                      {% assign new_collection = collections[section.settings.my_product_list] %}
+                      {% for product in new_collection.products %} 
+                        <div class="col-lg-4 p-0">
+                            <div class="shop-section-product-wrapper">
+                                <a href="{{ product.url }}">
+                                    <img src="{{ product.images.first| img_url: 'master' }}" alt="">
+                                </a>
+
+                                <div class="shop-now-button">
+                                    <a href="{{ product.url }}" class="wrd-button"> {{ section.settings.buttontitle }} </a>
+                                </div>
+                            </div>
+                        </div> 
+                       {% endfor %}
+                    </div>
+                </div>
+            </div>
+{% schema %}
+  {
+    "name": "qt-product-shop",
+    "settings": [
+		{
+            "type":"collection",
+            "id":"my_product_list",
+            "label":"Home Product list"
+        },
+		{
+			"type": "text",
+			"id": "buttontitle",
+			"label": "Button Title"
+		}
+	],
+	"presets": [
+		{
+			"name": "qt-product-shop"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,120 @@
+<footer class="site-footer">
+            <div class="footer-widget-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="widget col-lg-4 col-md-6 widget_nav_menu">
+                            <h4 class="widget-title">Newsletter</h4>
+
+                            <p>Be the first to know about events, new content,<br> products, or brands at Nuzanto</p>
+
+                            <div class="subscribe-form">
+                                <input type="email" name="EMAIL" placeholder="Enter your email" required>
+                                <input type="submit" value="Subscribe">
+                            </div>
+                        </div>
+
+                        <div class="widget col-lg-2 col-md-6 widget_nav_menu">
+                            <h4 class="widget-title">Quick Links</h4>
+                            <ul class="menu">
+                              {% for link in linklists.qt-footer-link-menu.links %}
+                                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                              {% endfor %}
+                            </ul>
+                        </div>
+
+                        <div class="widget col-lg-2 col-md-4 widget_nav_menu">
+                            <h4 class="widget-title">Support</h4>
+                            <ul class="menu">
+                              {% for link in linklists.qt-footer-support-menu.links %}
+                                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                              {% endfor %}
+                            </ul>
+                        </div>
+
+                        <div class="widget col-lg-2 col-md-4 widget_social">
+                            <h4 class="widget-title">Stay connected</h4>
+                            <ul>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="widget col-lg-2 col-md-4 widget_footer_logo">
+                            <a href="#" class="b-corp-logo">
+                                <img src="{{ section.settings.logo1 | img_url: 'master' }}" alt="">
+                            </a>
+
+                            <a href="#" class="planet-logo">
+                                <img src="{{ section.settings.logo2 | img_url: 'master' }}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-4">
+                            <div class="footer-location-change">
+                                <h6 class="location-title">Change Location</h6>
+
+                                <select name="locations" id="locations">
+                                    <option value="united-state">United States (US) - $</option>
+                                    <option value="canada">Canada (CA) - $</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-8">
+                            <div class="site-copyright-text-and-menu">
+                                <ul>
+                                    <li>&copy; Nuzanto 2021</li>
+                                    <li><a href="#">Terms Of Use</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-to-top">
+                <img src="{{ section.settings.bactotop | img_url: 'master' }}" alt="">
+            </div>
+        </footer>
+{% schema %}
+  {
+    "name": "qt-footer",
+    "settings": [
+		{
+			"type": "image_picker",
+			"id": "logo1",
+			"label": "Logo 1"
+		},
+		{
+			"type": "image_picker",
+			"id": "logo2",
+			"label": "Logo 2"
+		},
+		{
+			"type": "image_picker",
+			"id": "bactotop",
+			"label": "Back To Top Image"
+		}
+	],
+	"presets": [
+		{
+			"name": "qt-footer"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

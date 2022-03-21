@@ -1,0 +1,67 @@
+<div class="wrd-product-section">
+                <div class="container">
+                    <div class="row">
+                        
+                          {% assign new_collection = collections[section.settings.my_product_list] %}	
+                            {% for product in new_collection.products %} 
+                      <div class="col-lg-3 col-md-6">
+                            <div class="product wow fadeInUp" data-wow-duration="1.25s">
+                                <div class="wrd-product-thumb-image">
+                                  <a href="{{ product.url }}">
+                                    <img src="{{ product.images.first| img_url: 'medium' }}" alt="image">
+                                  </a>
+                                </div>
+
+                                <div class="wrd-product-info-wrapper">
+                                    <h3 class="wrd-product-title"><a href="{{ product.url }}">{{ product.title }}</a></h3>
+                                    <ul class="ratings wrd-list-style wrd-list-inline">
+                                        <li><img src="https://cdn.shopify.com/s/files/1/0630/0935/8074/files/icons8-star-15.png?v=1645866274"></li>
+                                        <li><img src="https://cdn.shopify.com/s/files/1/0630/0935/8074/files/icons8-star-15.png?v=1645866274"></li>
+                                        <li><img src="https://cdn.shopify.com/s/files/1/0630/0935/8074/files/icons8-star-15.png?v=1645866274"></li>
+                                        <li><img src="https://cdn.shopify.com/s/files/1/0630/0935/8074/files/icons8-star-15.png?v=1645866274"></li>
+                                        <li><img src="https://cdn.shopify.com/s/files/1/0630/0935/8074/files/icons8-star-15.png?v=1645866274"></li>
+                                    </ul>
+                                    <span class="price">
+                                                <del><span class="woocommerce-Price-amount amount"><bdi><span
+                                                        class="woocommerce-Price-currencySymbol">{{ country.currency.symbol }}</span>{{ product.price | money_without_trailing_zeros }}.00</bdi></span></del> <ins><span
+                                            class="woocommerce-Price-amount amount"><bdi><span
+                                            class="woocommerce-Price-currencySymbol">{{ country.currency.symbol }}</span>
+                                      {{ product.price | money_without_trailing_zeros }}.00
+                                      </bdi></span></ins>
+                                            </span>
+                                  
+									{% for variant in product.variants %}
+                                    <a href="#" class="add_to_cart_button" onclick="Shopify.addItem('{{ variant.id }}', 1)">Add to cart<i
+                                            class="flaticon-double-right-arrow"></i></a>
+                                  {% endfor %}
+                                </div>
+                            </div>
+                          </div> 
+                          {% endfor %}
+                                     
+                    </div>
+                </div>
+            </div>
+{% schema %}
+  {
+    "name": "qt-product",
+    "settings": [
+		{
+            "type":"collection",
+            "id":"my_product_list",
+            "label":"Home Product list"
+        }
+	],
+	"presets": [
+		{
+			"name": "qt-product"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
