@@ -1,0 +1,71 @@
+<section class="banner">
+  <div class="philosophy">
+    <div class="container-fluid">
+      <div class="philosophy__inner">
+        <div class="philosophy__banner">
+          <div class="banner__image">
+          	<img src="{{section.settings.banner_image | img_url: 'master'}}" alt="{{section.settings.banner_image.alt}}" />
+          </div>
+          <div class="philosophy__banner--description">
+            <div class="philosophy__banner--title">
+              <h2>{{section.settings.banner_title}}</h2>
+            </div>
+            <div class="philosophy__banner--sortdescription">
+              <p class="common__font--philosophy philosophy__banner--first-decsription">{{section.settings.banner_sort_first}}</p>
+            </div>
+            <div class="philosophy__banner--sortdescription-vertical-line"></div>
+            <div class="philosophy__banner--sortdescription">
+              <p class="common__font--philosophy philosophy__banner--second-decsription">{{section.settings.banner_sort_second}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+{% schema %}
+  {
+    "name": "QT Custom Banner",
+    "settings": [
+		{
+		"type": "image_picker",
+		"id" : "banner_image",
+		"label" : "Banner Image"
+		},
+		
+		{
+		"type": "text",
+		"id" : "banner_title",
+		"label" : "Banner Title"
+		},
+		{
+		"type": "text",
+		"id" : "banner_sort_first",
+		"label" : "Banner Description First"
+		},
+		{
+		"type": "text",
+		"id" : "banner_sort_second",
+		"label" : "Banner Description Second"
+		}
+
+	],
+	"presets" : [
+	{
+	"name" : "QT Custom Banner",
+	"category" : "Banner"
+	}	
+	]
+	
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

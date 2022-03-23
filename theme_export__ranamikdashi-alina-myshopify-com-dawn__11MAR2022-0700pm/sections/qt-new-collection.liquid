@@ -1,0 +1,85 @@
+<section class="common__section class-{{section.id}}" id="{{ section.id }}">
+  <div class="collection">
+    <div class="collection__container">
+      <div class="collection__inner">
+        <div class="collection__top">
+          <div class="collection__top--text">
+            <div>
+              <h2 class="common__hedding">{{section.settings.collectionTitle}}</h2>
+            </div>
+            <ul class="tabs">
+              {% for block in section.blocks %}
+              {% assign my_collection = collections[block.settings.my_collection] %}
+              <li class="tab-link{% if forloop.first %} current{% endif %}" data-tab="tab-{{forloop.index}}">{{my_collection.title}}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        
+  
+        {% for block in section.blocks %}
+        <div id="tab-{{forloop.index}}" class="tab-content {% if forloop.first %} current{% endif %}">
+          <div class="row swiper mySwiper"> 
+            <div class="swiper-wrapper" style="width:100%;">
+              {% assign my_collection = collections[block.settings.my_collection] %}
+              {% for product in my_collection.products %}
+              <div class="col-3 swiper-slide" style="width: 100%;">
+                <div class="swiper__box">
+                  <div class="product__image">
+                    <a href="{{product.url}}"><img src="{{product.featured_image | product_img_url: "master"}}" alt="{{product.featured_image.alt}}"></a>
+                  </div>
+                  <div class="product__name">
+                    {{product.title}}
+                    <span><i class="far fa-heart"></i></span>
+                  </div>
+                  <div class="product__price">
+                    {{product.price}}
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!--       <div class="swiper-pagination"></div> -->
+            <div class="swiper-scrollbar"></div>
+            <div class="swiper-pagination" style="position: relative; margin-top: 30px;" ></div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+    
+{% schema %}
+{
+   "name":"QT Collection",
+   "settings":[
+      {
+         "type":"text",
+         "id":"collectionTitle",
+         "label":"Collection Title"
+      }
+   ],
+   "blocks":[
+      {
+         "name":"Select Collection",
+         "type":"collection",
+         "settings":[
+            {
+               "type":"collection",
+               "id":"my_collection",
+               "label":"Collection"
+            }
+         ]
+      }
+   ],
+   "presets":[
+      {
+         "name":"QT Colletion",
+         "category":"Collection"
+      }
+   ]
+}
+{% endschema %}

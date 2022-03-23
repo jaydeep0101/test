@@ -1,0 +1,64 @@
+<section >
+  <div class="sustainability ">
+    <div class="container-fluid">
+      <div class="sustainability__inner ">
+        <div class="sustainability__box">
+          <div class="row">
+            {% for block in section.blocks %}
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="sustainability__box--text">
+                <h2 class="common__hedding">{{block.settings.sustainability_text}}</h2>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="sustainability__box--description">
+                <p class="common__font--philosophy ">{{block.settings.sustainability_description}}</p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+ {
+   "name":"Our Sustainability ",
+   "settings":[
+		
+      
+   ],
+   "blocks":[
+      {
+         "name":"Our Sustainability ",
+         "type":"text",
+         "settings":[
+            {
+               "type":"text",
+               "id":"sustainability_text",
+               "label":"Sustainability Title"
+            },
+            {
+               "type":"textarea",
+               "id":"sustainability_description",
+               "label":"Sustainability Description"
+            }
+         ]
+      }
+   ],
+   "presets":[
+      {
+         "name":"Our Sustainability",
+         "category":"Sustainability"
+      }
+   ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,85 @@
+<section>
+  <div class="anothertitle">
+    <div class="container-fluid">
+      <div class="anothertitle__inner">
+        <div class="anothertitle__box anothertitle__box--desktop">
+          <div class="row">
+            
+            <div class="col-lg-6 col-md-6 col-12" >
+              <div class="another__title">
+                <h2 class="ourlewellery__collection--title">{{section.settings.another_title}}</h2>
+              </div>
+              <div class="another__description">
+                <p class="common__font--philosophy">{{section.settings.another_description}}</p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12" >
+              <div class="another__image">
+              	<img src="{{section.settings.another_image | img_url: "master"}}" alt="{{section.settings.another_image.alt}}">
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+        
+        <div class="anothertitle__box anothertitle__box--mobile">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-12" >
+              <div class="another__title">
+                <h2 class="ourlewellery__collection--title">{{section.settings.another_title}}</h2>
+              </div>
+              <div class="another__image">
+              	<img src="{{section.settings.another_image | img_url: "master"}}" alt="{{section.settings.another_image.alt}}">
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12" >
+              
+              <div class="another__description">
+                <p class="common__font--philosophy">{{section.settings.another_description}}</p>
+              </div>
+            </div>
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Another Title",
+    "settings": [
+		{
+		"type" : "text",
+		"id" : "another_title",
+		"label" : "Another Title"
+		},
+		{
+		"type" : "textarea",
+		"id" : "another_description",
+		"label" : "Another Description"
+		},
+		{
+		"type" : "image_picker",
+		"id" : "another_image",
+		"label" : "Another Image"
+		}
+	],
+	"presets" : [
+		{
+			"name" : "Another Title",
+			"category" : "Another Title"
+		}
+	]
+	
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

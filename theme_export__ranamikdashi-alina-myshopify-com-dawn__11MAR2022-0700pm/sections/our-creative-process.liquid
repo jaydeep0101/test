@@ -1,0 +1,152 @@
+<section>
+  <div class="process">
+    <div class="container">
+      <div class="process__inner">
+        <div class="process__title">
+          <h2 class="common__hedding">{{section.settings.ourmission_title}}</h2>
+        </div>
+        <div class="process__boxes">
+          <div class="row">
+          	<div class="col-lg-6 col-12  col-md-6">
+            <div class="process__box process__box--first">
+              <div class = "process__box--image">
+              	<img src="{{section.settings.ourmission_image_first | img_url: "master"}}" alt="{{section.settings.ourmission_image_first.alt}}" />
+              </div>
+              <div class="process__box--title">
+                <h2>{{section.settings.ourmission_title_first}}</h2>
+              </div>
+              <div class="process__box--description">
+                <p class="common__font--philosophy common__font--padding">{{section.settings.ourmission_description_first}}</p>              </div>
+            </div>
+          </div>
+            <div class="col-lg-6 col-12  col-md-6">
+            <div class="process__box process__box--second">
+              <div class = "process__box--image process__box--image-second">
+              	<img src="{{section.settings.ourmission_image_second | img_url: "master"}}" alt="{{section.settings.ourmission_image_first.alt}}" />
+              </div>
+              <div class="process__box--title">
+                <h2>{{section.settings.ourmission_title_first}}</h2>
+              </div>
+              <div class="process__box--description">
+                <p class="common__font--philosophy common__font--padding">{{section.settings.ourmission_description_first}}</p>              </div>
+            </div>
+          </div>
+          </div>
+          <div class="row process__row">
+          	<div class="col-lg-5 col-12  col-md-5">
+            <div class="process__box process__box--third">
+              <div class = "process__box--image">
+              	<img src="{{section.settings.ourmission_image_third | img_url: "master"}}" alt="{{section.settings.ourmission_image_first.alt}}" />
+              </div>
+              <div class="process__box--title">
+                <h2>{{section.settings.ourmission_title_first}}</h2>
+              </div>
+              <div class="process__box--description">
+                <p class="common__font--philosophy common__font--padding">{{section.settings.ourmission_description_first}}</p>              </div>
+            </div>
+          </div>
+            <div class="col-lg-5 col-12  col-md-5">
+            <div class="process__box process__box--fourth">
+              <div class = "process__box--image process__box--image-fourth">
+              	<img src="{{section.settings.ourmission_image_fourth | img_url: "master"}}" alt="{{section.settings.ourmission_image_first.alt}}" />
+              </div>
+              <div class="process__box--title">
+                <h2>{{section.settings.ourmission_title_first}}</h2>
+              </div>
+              <div class="process__box--description">
+                <p class="common__font--philosophy common__font--padding">{{section.settings.ourmission_description_first}}</p>              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "QT Our Process",
+    "settings": [
+		{
+		"type": "text",
+		"id" : "ourmission_title",
+		"label" : "Our Misssion Title"
+		},
+		{
+		"type": "image_picker",
+		"id" : "ourmission_image_first",
+		"label" : "Our Mission First Image"
+		},
+		{
+		"type": "textarea",
+		"id" : "ourmission_title_first",
+		"label" : "Our Mission First Title"
+		},
+		{
+		"type": "textarea",
+		"id" : "ourmission_description_first",
+		"label" : "Our Mission First Description"
+		},
+		{
+		"type": "image_picker",
+		"id" : "ourmission_image_second",
+		"label" : "Our Mission Second Image"
+		},
+		{
+		"type": "text",
+		"id" : "ourmission_title_second",
+		"label" : "Our Mission Second Title"
+		},
+		{
+		"type": "textarea",
+		"id" : "ourmission_description_second",
+		"label" : "Our Mission Second Description"
+		},
+		
+		{
+		"type": "image_picker",
+		"id" : "ourmission_image_third",
+		"label" : "Our Mission Third Image"
+		},
+		{
+		"type": "text",
+		"id" : "ourmission_title_third",
+		"label" : "Our Mission Third Title"
+		},
+		{
+		"type": "textarea",
+		"id" : "ourmission_description_third",
+		"label" : "Our Mission Third Description"
+		},
+		{
+		"type": "image_picker",
+		"id" : "ourmission_image_fourth",
+		"label" : "Our Mission Fourth Image"
+		},
+		{
+		"type": "text",
+		"id" : "ourmission_title_fourth",
+		"label" : "Our Mission Fourth Title"
+		},
+		{
+		"type": "textarea",
+		"id" : "ourmission_description_fourth",
+		"label" : "Our Mission Fourth Description"
+		}
+	],
+	"presets" : [
+		{
+			"name":"QT Our Process",
+			"category" : "Our Process"
+		}
+	]	
+	
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

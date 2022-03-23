@@ -1,0 +1,96 @@
+<section class="our-jewellery">
+  <div class="ourjewellery">
+    <div class="container-fluid">
+      <div class="ourjewellery__inner">
+        <div class="ourjewellery__items">
+          <div class="row">
+            <div class="col-12 col-lg-6 ">
+              <div class="ourjewellery__image">
+              	<img src="{{section.settings.ourjewellery_image | img_url: "master"}}" alt="{{section.settings.ourjewellery_image.alt}}" />
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              
+              <div class="ourlewellery__collection">
+                {% for block in section.blocks %}
+                {% assign my_collection = collections[block.settings.my_collection] %}
+                <div class="ourlewellery__collection--itmes">
+                  <div class="ourlewellery__collection--title">{{my_collection.title}}</div>
+                  <div class="ourlewellery__collection--description common__font--philosophy ">{{my_collection.description}}</div>
+                </div>
+                {% endfor %}
+                {% for block in section.blocks %}
+                <div class="row swiper ourswiper">
+                  <div class="swiper-wrapper">
+                    
+                    {% assign my_collection = collections[block.settings.my_collection] %}
+					{% for product in my_collection.products %}
+                  	<div class="col-3 swiper-slide" style="width: 100%;">
+                <div class="swiper__box">
+                  <div class="product__image">
+                    <a href="{{product.url}}"><img src="{{product.featured_image | product_img_url: "master"}}" alt="{{product.featured_image.alt}}"></a>
+                  </div>
+                  <div class="product__name">
+                    <h2>{{product.title}}</h2>
+                    <span><i class="far fa-heart"></i></span>
+                  </div>
+                  <div class="product__price">
+                    {{product.price}}
+                  </div>
+                </div>
+              </div>
+                    {% endfor %}
+                  </div>
+                   <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-scrollbar"></div>
+                    <div class="swiper-pagination" style="position: relative; margin-top: 50px;" ></div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Our Jewellery",
+    "settings": [
+		{
+		"type": "image_picker",
+		"id" : "ourjewellery_image",
+		"label" : "Our jewellery Image"
+		}
+	],
+	"blocks" : [
+		{
+		"name" : "QT Select Product",
+		"type" : "collection",
+		"settings":[
+            {
+               "type":"collection",
+               "id":"my_collection",
+               "label":"Collection"
+            }
+         ]
+	}
+	],
+	"presets" : [
+		{
+			"name" : "Our Jewellery",
+			"category" : "Our Jewellery"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

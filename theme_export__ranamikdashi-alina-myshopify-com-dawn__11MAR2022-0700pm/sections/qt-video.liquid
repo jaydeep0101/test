@@ -1,0 +1,43 @@
+<section>
+  <div class="addproduct">
+    <div class="addproduct__container">
+      <div class="addproduct__inner">
+        <div class="addproduct__items">
+          <div class="video__items--box">
+          	
+<video class="video-player " id="5"  autoplay="autoplay" controls preload="auto" width="100%"  height="100%"
+          poster="//cdn.shopify.com/s/files/1/0201/3347/8500/t/4/assets/ytthumb.jpg?13431113366972767101" data-setup="{}">
+  <source src="https://www.youtube.com/watch?v=_9VUPq3SxOc" type="video/mp4" />
+  <source src="https://www.youtube.com/watch?v=_9VUPq3SxOc" type="video/ogg" />
+Your browser does not support the video tag.
+</video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+{% schema %}
+  {
+    "name": "Add New Custom Video",
+    "settings": [
+		 {
+          "type": "video_url",
+          "accept": ["vimeo", "youtube"],
+          "id": "video_url",
+          "label": "Video URL",
+          "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
+        }
+	],
+	"presets": [
+		{
+          "name": "Add Custom Video",
+          "category" : "Video"
+		}
+	]
+  }
+{% endschema %}
+

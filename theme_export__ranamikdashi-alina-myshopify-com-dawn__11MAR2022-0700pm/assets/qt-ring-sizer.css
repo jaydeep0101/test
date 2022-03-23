@@ -1,0 +1,129 @@
+
+.rings__padding {
+  padding:0 150px;
+}
+
+.rings .row>* {
+  padding-right: 0;
+  padding-left:0;
+  margin-top: 0;
+}
+
+.rings .row>*:not(:last-child) {
+  padding-right:50px;
+}
+
+@media(max-width:768px) {
+  .row {
+    display:flex;
+    justify-content:space-around;
+  }
+  .rings .row>*:not(:last-child) {
+    padding-right:0;
+  }
+
+  .rings .row>*:nth-child(1) {
+    padding-right:30px;
+  }
+
+  .rings__padding {
+    padding:0 34px;
+  }
+  
+  
+  #shopify-section-template--15604048822516__1642662239e8469575 .process__box--image.process__box--image-fourth {
+  	    margin-left: 5px;
+  }
+}
+
+@media(max-width:575px) {
+
+ #shopify-section-template--15604048822516__1642662239e8469575 .process__box--image.process__box--image-fourth {
+    margin-left: 0px;
+	}
+}
+
+@media(max-width:375px) {
+  .rings__padding {
+    padding:0 20px;
+  }
+  .rings .row>*:not(:first-child) {
+    padding-top: 30px;
+  }
+  .rings .row>*:nth-child(1) {
+    padding-top:20px;
+    padding-right:0;
+  }
+}
+
+.rings__items--box-image img{
+  width: 380px;
+  width:100%;
+  height: 235px;
+  object-fit: cover;
+}
+
+.rings__items--box-description  {
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: -0.05em;
+}
+
+.measuring__padding {
+  padding:0 177px;
+}
+
+@media(max-width:768px) {
+  .measuring__padding {
+    padding: 0 24px 0 54px;
+  }
+}
+
+
+.measuring__padding .row{
+  text-align:center;
+}
+
+.rings__items--box-title h2 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 100%;
+  /* identical to box height, or 18px */
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.rings__items h2.common__hedding {
+  text-align:center;
+  padding-top:80px;
+}
+
+.measuring__padding .rings__items--box{
+  padding-top:30px;
+}
+
+.measuring__padding .rings__items--box .rings__items--box-description {
+  padding-top:20px;
+}
+
+@media (max-width: 375px){
+  .measuring__padding {
+    padding: 50px 22px 0 23px;
+  }
+}
+
+.rings__padding .rings__items--box {
+  padding-top:80px;
+}
+
+@media(max-width:765px) {
+
+  .rings__padding .rings__items--box {
+    padding-top: 0px;
+  }
+}
