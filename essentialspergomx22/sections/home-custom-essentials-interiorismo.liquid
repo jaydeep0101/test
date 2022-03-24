@@ -1,0 +1,102 @@
+
+<!-- javascript:void(0) -->
+
+<!-- {% if section.settings.link == '' %} javascript:void(0) {% else %} {{ section.settings.link }} {% endif %} -->
+
+
+<section>
+  <div class="new-banner">
+    <div class="new-banner__inner">
+     <div class="new-banner__img">
+        <a href="{{ section.settings.link }}">
+          <img src="{{ section.settings.banner_img | img_url: 'master' }}">
+        </a>
+      </div>
+      <div class="new-banner__img-mobile">
+        <a href="{{ section.settings.link }}">
+          <img src="{{ section.settings.banner_img_mobile | img_url: 'master' }}">
+        </a>
+      </div>
+      <div class="new-banner__content">
+<!--         <div class="new-banner__subtitle">
+          <h3>{{ section.settings.subtitle }}</h3>
+        </div> -->
+        <div class="new-banner__title">
+          <h1>{{ section.settings.title }}</h1>
+        </div>
+        <div class="new-banner__text">
+          <p>{{ section.settings.text }}</p>
+        </div>
+        <div class="new-banner__bold-text">
+          <p><b>{{ section.settings.bold_text }}</b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "A Custom Banner 17",
+    "settings": [
+		{
+			"type":"image_picker",
+			"id": "banner_img",
+			"label": "Banner Image"
+		},
+		{
+			"type":"image_picker",
+			"id": "banner_img_mobile",
+			"label": "Mobile Banner Image"
+		},
+		{
+			"type":"url",
+			"id": "link",
+			"label": "Banner Image URL"
+		},
+		{
+			"type":"text",
+			"id": "subtitle",
+			"label": "Banner Subtitle",
+			"default": "ESCUADRA SALAMANCA"
+		},
+		{
+			"type":"text",
+			"id": "title",
+			"label": "Banner Title",
+			"default": "EDICIÓN LIMITADA"
+		},
+		{
+			"type":"text",
+			"id": "text",
+			"label": "Banner Text",
+			"default": "TRAEMOS PARA TI LAS PIEZAS"
+		},
+		{
+			"type":"text",
+			"id": "bold_text",
+			"label": "Banner Bold Text",
+			"default": "MÁS BONITAS DEL MUNDO"
+		}
+	],
+	"presets": [
+		{
+			"name": "a custom banner",
+			"category": "custom"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
