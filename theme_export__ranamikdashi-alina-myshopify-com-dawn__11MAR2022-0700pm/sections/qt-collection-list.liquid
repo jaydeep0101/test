@@ -1,0 +1,83 @@
+
+<section class="common__section">
+  <div class="collection">
+    <div class="collection__container">
+      <div class="collection__inner">
+        <div class="collection__top">
+          <div class="row slider__swiper">
+            <div class="swiper-wrapper">
+              {% for block in section.blocks %}
+              	<div class="col-12  col-lg-6  swiper-slide">
+                  <div class="slider__collection--box">
+                    <div class="slider__collection--box-title">
+                      <div class="slider__collection--box-title-items">
+                        <a href="{{block.settings.collection.url}}" ><h2 class="common__hedding">{{block.settings.collection.title}}</h2></a>
+                      </div>
+                      <div class="slider__collection--box-description">
+                        <a href="{{block.settings.collection.url}}"><p>{{block.settings.collection.description}}</p></a>
+                      </div>
+                      <div class="shop__now">
+                        <a href='{{block.settings.collection.url}}' class="common__font--size ">{{section.settings.shop_now}}</a>
+                      </div>
+                    </div>
+                    <div class="slider__collection--box-image">
+                      <div class="slider__collection--image">
+                        <a href="{{block.settings.collection.url}}"><img src="{{block.settings.collection.featured_image | product_img_url: 'master' }}"></a>
+                      </div>
+                    </div>
+                  </div>
+              	</div>
+              {% endfor %}
+            </div>
+             <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-scrollbar"></div>
+            <div class="swiper-pagination" style="position:relative; margin-top:50px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+   "name":"Collection Slider",
+   "settings":[
+      {
+         "type":"text",
+         "id":"collection_title",
+         "label":"Collection Title"
+      },
+  		
+  	  {
+         "type":"text",
+         "id":"shop_now",
+         "label":"Shop Now"
+      }
+  		
+   ],
+   "blocks":[
+      {
+         "name":"Collection Slider",
+         "type":"collection",
+         "settings":[
+            {
+               "type":"collection",
+               "id":"collection",
+               "label":"Collection"
+            }
+
+         ]
+      }
+   ],
+   "presets":[
+      {
+         "name":"Colletion Slider",
+         "category":"Collection"
+      }
+   ]
+}
+{% endschema %}
+
+

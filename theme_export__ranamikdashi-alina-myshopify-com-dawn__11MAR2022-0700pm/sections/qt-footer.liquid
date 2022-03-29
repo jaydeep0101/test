@@ -1,0 +1,261 @@
+<section>
+  <div class="footer">
+    <div class="footer__container">
+      <div class="footer__inner">
+        <div class="footer__items">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-7 res-query">
+              <div class="footer__left footer__for--desktop">	
+                <div class="row">
+                  <div class="col-md-6 col-12 " >
+                    <div class="footer__items--box-first footer__common--padding">
+                      <div class="footer__icon">
+                        <span>
+                          <svg width="75" height="36" viewBox="0 0 75 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.56666 0.440468C2.36386 0.870039 0.301926 2.13011 0.0155461 2.61696C-0.127644 2.78879 0.731497 3.87703 2.04885 5.22302C5.94362 9.14643 12.9886 14.7308 19.518 18.9979C21.7232 20.4298 24.7015 22.7781 26.878 24.7542C29.9709 27.532 30.6869 28.0762 31.4601 28.0762C33.4648 28.0475 35.1544 26.8734 41.6839 20.8594C43.6599 19.0552 47.5833 15.6759 50.4185 13.2989C53.225 10.9506 56.5184 8.11546 57.7212 7.02722C58.924 5.91033 60.9 4.13478 62.1028 3.07517C64.7089 0.755486 65.0525 -0.189569 63.1338 0.12545C60.4991 0.555019 57.4348 2.55968 52.0795 7.39951C48.7288 10.4351 42.858 15.5041 37.9323 19.6852C35.6413 21.6326 34.6676 22.2913 34.3239 22.1481C34.0375 22.0335 33.0066 21.289 32.0615 20.4585C31.0878 19.6566 29.6559 18.6256 28.9113 18.196C25.9616 16.535 18.8307 11.552 16.7688 9.74783C15.5946 8.68822 13.7904 7.19905 12.7595 6.39718C11.7285 5.59531 9.89567 3.81976 8.66423 2.47377C6.20136 -0.218206 5.80043 -0.390036 3.56666 0.440468Z" fill="#FAFAFA"/>
+                            <path d="M70.4643 4.04893C69.7483 4.4785 69.0324 5.10854 62.8466 10.607C60.0973 13.0413 57.2335 15.5614 56.4316 16.1915C55.6584 16.8215 53.4533 18.8262 51.5632 20.6304C49.6731 22.4346 45.9215 25.8138 43.2582 28.1335C40.5662 30.4246 37.7024 33.0306 36.8432 33.8898C35.3541 35.4362 35.3254 35.4649 35.9555 35.8085C36.6428 36.1808 38.8193 35.9803 39.793 35.4649C40.3657 35.1498 45.6924 30.4532 52.5655 24.2101C54.9997 21.9763 59.0091 18.4825 61.4433 16.4206C70.6361 8.65966 74.7886 4.65033 74.2159 4.07757C73.8722 3.76255 71.0084 3.73392 70.4643 4.04893Z" fill="#FAFAFA"/>
+                            <path d="M35.5252 5.16687C32.8618 5.28142 30.2844 5.51053 29.7976 5.65372C27.6497 6.39831 26.1892 7.20017 26.2751 7.54383C26.361 7.71566 27.4206 8.68935 28.6807 9.69168C29.9121 10.694 32.0313 12.4123 33.3487 13.5005C34.6947 14.5888 35.9834 15.4766 36.2125 15.4766C37.5012 15.4766 39.2481 14.1019 42.4556 10.5508C44.317 8.51752 45.8635 6.57014 45.9208 6.28375C46.1212 5.1096 43.4006 4.82321 35.5252 5.16687Z" fill="#FAFAFA"/>
+                          </svg>
+                        </span>
+                      </div>
+                      <div class="footer__about">
+                        <h2>About</h2>
+                        <ul>
+                          {%- for link in linklists.about-items.links -%}
+                          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <div class="footer__items--box-second footer__common--padding">
+                      <div class="footer__shop">
+                        <h2>Shop Online</h2>
+                        <ul>
+                          {%- for link in linklists.shop-menu.links -%}
+                          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                      <div class="footer__support">
+                        <h2>Support</h2>
+                        <ul>
+                          {%- for link in linklists.support.links -%}
+                          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row d-flex justify-content-end">
+                  <div class="col-md-6 col-12">
+                    <div class="footer__bottom--box">
+                      <div class="footer__help">
+                        <h2>NEED HELP?</h2>
+                        <ul>
+                          {%- for link in linklists.footer-help.links -%}
+                          <li><a href="mailto:ranamikdashi@gmail.com">{{ link.title }}</a></li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                      <div class="footer__social--media">
+                        <h2>SOCIAL MEDIA</h2>
+                        <ul>
+                          {%- for link in linklists.social-media.links -%}
+                          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="footer__left footer__for--mobile">	
+                <div class="row">
+                  
+                  <div class="col-md-6 col-12">
+                    <div class="footer__items--box-second footer__common--padding">
+                      <div class="footer__shop">
+                        <h2>Shop Online</h2>
+                        <ul>
+                          {%- for link in linklists.shop-menu.links -%}
+                          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                      <div class="footer__support">
+                        <h2>Support</h2>
+                        <ul>
+                          {%- for link in linklists.support.links -%}
+                          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row d-flex justify-content-end">
+                  <div class="col-md-6 col-12">
+                    <div class="footer__bottom--box">
+                      <div class="footer__help">
+                        <h2>NEED HELP?</h2>
+                        <ul>
+                          {%- for link in linklists.footer-help.links -%}
+                          <li><a href="mailto:ranamikdashi@gmail.com">{{ link.title }}</a></li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                      <div class="footer__social--media">
+                        <h2>SOCIAL MEDIA</h2>
+                        <ul>
+                          {%- for link in linklists.social-media.links -%}
+                          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                  
+                  <div class="col-md-6 col-12 " >
+                    <div class="footer__items--box-first footer__common--padding">
+                     
+                      <div class="footer__about">
+                        <h2>About</h2>
+                        <ul>
+                          {%- for link in linklists.about-items.links -%}
+                          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                      
+                       <div class="footer__icon">
+                        <span>
+                          <svg width="75" height="36" viewBox="0 0 75 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.56666 0.440468C2.36386 0.870039 0.301926 2.13011 0.0155461 2.61696C-0.127644 2.78879 0.731497 3.87703 2.04885 5.22302C5.94362 9.14643 12.9886 14.7308 19.518 18.9979C21.7232 20.4298 24.7015 22.7781 26.878 24.7542C29.9709 27.532 30.6869 28.0762 31.4601 28.0762C33.4648 28.0475 35.1544 26.8734 41.6839 20.8594C43.6599 19.0552 47.5833 15.6759 50.4185 13.2989C53.225 10.9506 56.5184 8.11546 57.7212 7.02722C58.924 5.91033 60.9 4.13478 62.1028 3.07517C64.7089 0.755486 65.0525 -0.189569 63.1338 0.12545C60.4991 0.555019 57.4348 2.55968 52.0795 7.39951C48.7288 10.4351 42.858 15.5041 37.9323 19.6852C35.6413 21.6326 34.6676 22.2913 34.3239 22.1481C34.0375 22.0335 33.0066 21.289 32.0615 20.4585C31.0878 19.6566 29.6559 18.6256 28.9113 18.196C25.9616 16.535 18.8307 11.552 16.7688 9.74783C15.5946 8.68822 13.7904 7.19905 12.7595 6.39718C11.7285 5.59531 9.89567 3.81976 8.66423 2.47377C6.20136 -0.218206 5.80043 -0.390036 3.56666 0.440468Z" fill="#FAFAFA"/>
+                            <path d="M70.4643 4.04893C69.7483 4.4785 69.0324 5.10854 62.8466 10.607C60.0973 13.0413 57.2335 15.5614 56.4316 16.1915C55.6584 16.8215 53.4533 18.8262 51.5632 20.6304C49.6731 22.4346 45.9215 25.8138 43.2582 28.1335C40.5662 30.4246 37.7024 33.0306 36.8432 33.8898C35.3541 35.4362 35.3254 35.4649 35.9555 35.8085C36.6428 36.1808 38.8193 35.9803 39.793 35.4649C40.3657 35.1498 45.6924 30.4532 52.5655 24.2101C54.9997 21.9763 59.0091 18.4825 61.4433 16.4206C70.6361 8.65966 74.7886 4.65033 74.2159 4.07757C73.8722 3.76255 71.0084 3.73392 70.4643 4.04893Z" fill="#FAFAFA"/>
+                            <path d="M35.5252 5.16687C32.8618 5.28142 30.2844 5.51053 29.7976 5.65372C27.6497 6.39831 26.1892 7.20017 26.2751 7.54383C26.361 7.71566 27.4206 8.68935 28.6807 9.69168C29.9121 10.694 32.0313 12.4123 33.3487 13.5005C34.6947 14.5888 35.9834 15.4766 36.2125 15.4766C37.5012 15.4766 39.2481 14.1019 42.4556 10.5508C44.317 8.51752 45.8635 6.57014 45.9208 6.28375C46.1212 5.1096 43.4006 4.82321 35.5252 5.16687Z" fill="#FAFAFA"/>
+                          </svg>
+                        </span>
+                      </div>
+                      
+                      
+                    </div>
+                  </div>
+                  
+                  
+                </div>
+              </div>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+            </div>
+            <div class="col-md-12 col-12 col-lg-5">
+              <div class="footer-block__newsletter">
+                <div class="footer__mail--title">{{ section.settings.newsletter_heading | escape }}</div>
+                {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
+                <input type="hidden" name="contact[tags]" value="newsletter">
+                <div class="newsletter-form__field-wrapper">
+                  <div class="field">
+                    <input
+                           id="NewsletterForm--{{ section.id }}"
+                           type="email"
+                           name="contact[email]"
+                           class="field__input"
+                           value="{{ form.email }}"
+                           aria-required="true"
+                           autocorrect="off"
+                           autocapitalize="off"
+                           autocomplete="email"
+                           {% if form.errors %}
+                           autofocus
+                           aria-invalid="true"
+                           aria-describedby="ContactFooter-error"
+                           {% elsif form.posted_successfully? %}
+                           aria-describedby="ContactFooter-success"
+                           {% endif %}
+                           placeholder="{{ 'newsletter.label' | t }}"
+                           required
+                           >
+                    <label class="field__label" for="NewsletterForm--{{ section.id }}">
+                      {{ 'newsletter.label' | t }}
+                    </label>
+                    <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
+                      {% render 'icon-arrow' %}
+                    </button>
+                  </div>
+                  {%- if form.errors -%}
+                  <small class="newsletter-form__message form__message" id="ContactFooter-error">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
+                  {%- endif -%}
+                </div>
+                {%- if form.posted_successfully? -%}
+                <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="ContactFooter-success" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
+                {%- endif -%}
+                {%- endform -%}
+              </div>
+            </div>
+          </div>            
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+ {
+   "name":"QT Footer",
+	"settings":[
+		{
+          "type":"image_picker",
+          "id":"footer_image",
+		  "label":"Footer Icon"
+        },
+		{
+			"type":"text",
+			"id":"newsletter_heading",
+			"label": "New Letter Title"
+		}
+	],
+   "blocks":[
+      {
+         "type":"custom",
+		 "name":"custom",
+         "settings":[
+            {
+               "type":"link_list",
+               "id":"menu-item",
+               "default":"main-menu",
+               "label":"t:sections.header.settings.menu.label"
+            }
+           
+         ]
+      }
+   ],
+   "presets":[
+      {
+         "name":"QT Footer",
+         "category":"collection"
+      }
+   ]
+}
+{% endschema %}

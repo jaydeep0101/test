@@ -1,0 +1,62 @@
+<section class="rings__padding">
+  <div class="rings">
+    <div class="container-fluid p-0">
+      <div class="rings__inner">
+        <div class="rings__items">
+          
+          <div class="row">
+            {% for block in section.blocks %}
+              <div class="col-lg-4 col-md-6 col-12">
+                <div class="rings__items--box">
+                  <div class="rings__items--box-image">
+                  	<img src="{{block.settings.ring_image | img_url: "master"}}" alt="{{block.settings.ring_image.alt}}">
+                  </div>
+                  <div class="rings__items--box-description">
+                    <p>{{block.settings.ring_description}}</p>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "QT Ring Sizer",
+    "settings": [],
+	"blocks":[
+      {
+         "name":"QT Ring Sizer",
+         "type":"custom",
+         "settings":[
+            {
+               "type":"textarea",
+               "id":"ring_description",
+               "label":"Ring Description"
+            },
+            {
+               "type":"image_picker",
+               "id":"ring_image",
+               "label":"Ring Image"
+            }
+         ]
+      }
+   ],
+   "presets":[
+      {
+         "name":"QT Ring Sizer",
+         "category":"Ring Sizer"
+      }
+   ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

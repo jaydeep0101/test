@@ -1,0 +1,200 @@
+
+<section class="pricingcard">
+  <div class="pricingcard__main">
+    <div class="container pricingcard__background">
+      <div class="row justify-content-center">
+        <div class="col-xl-8 col-lg-7 col-md-10">
+          <div class="pricingcard__title">
+            <span>{{ section.settings.pricingcard_title }}</span>
+            <h2>{{ section.settings.pricingcard_plan_title }}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-xl-12 custom__padding--all">
+          <div class="pricing__nav--btn">
+            <nav>
+              <div class="nav nav-tabs">
+                <a class="nav-link tab-link current" data-tab="tab-1">{{section.settings.pricingcard_tab_first}}</a>
+                <a class="nav-link nav-link-second tab-link" data-tab="tab-2">{{section.settings.pricingcard_tab_second}}</a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="container pricingcard__background pricingcard__background--second "> 
+      <div class="tab-content-main">
+        <div id="tab-1" class="tab-content current ">
+          <div class="row">
+            {% for i in section.blocks %}
+          	<div class="col-xl-4 col-lg-4 col-md-6 col-sm-10  custom__padding--all">
+              <div class="pricing__single--card text-center mb-30">
+                <div class="pricingcard__top">
+                  <div class="pricingcard__top--icon">
+                  	<img src="{{i.settings.pricongcard_icon | img_url: 'master'}}"  alt="{{i.settings.pricongcard_icon.alt}}"/>
+                  </div>
+                  <span> {{i.settings.pricongcard_icon_type}} </span>
+                </div>
+                <div class="pricingcard__middle">
+                  <h4>{{i.settings.pricingcard_icon_price}}</h4>
+                </div>
+                <div class="pricingcard__bottom">
+                  <ul>
+                    
+                    <li>{{i.settings.card_description_first}}</li>
+                    <li>{{i.settings.card_description_second}}</li>
+                    <li>{{i.settings.card_description_third}}</li>
+                    <li>{{i.settings.card_description_fourth}}</li>
+                    
+                  </ul>
+                  <a href="#">{{i.settings.pricingcard_btn}}</a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        
+        
+        <div id="tab-2" class="tab-content ">
+          <div class="row">
+            {% for i in section.blocks %}
+          	<div class="col-xl-4 col-lg-4 col-md-6 col-sm-10 custom__padding--all">
+              <div class="pricing__single--card text-center mb-30">
+                <div class="pricingcard__top">
+                  <div class="pricingcard__top--icon">
+                  	<img src="{{i.settings.pricongcard_icon_second | img_url: 'master'}}"  alt="{{i.settings.pricongcard_icon_second.alt}}"/>
+                  </div>
+                  <span> {{i.settings.pricongcard_icon_type}} </span>
+                </div>
+                <div class="pricingcard__middle">
+                  <h4>{{i.settings.pricingcard_icon_price_second}}</h4>
+                </div>
+                <div class="pricingcard__bottom">
+                  <ul>
+                   
+                    <li>{{i.settings.card_description_first}}</li>
+                    <li>{{i.settings.card_description_second}}</li>
+                    <li>{{i.settings.card_description_third}}</li>
+                    <li>{{i.settings.card_description_fourth}}</li>
+                    
+                  </ul>
+                  <a href="#">{{i.settings.pricingcard_btn}}</a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+		  
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+   
+
+
+{% schema %}
+{
+   "name":"Qt Pricing Card",
+   "settings":[
+      {
+         "type":"text",
+         "id":"pricingcard_title",
+         "label":"pricingcard title"
+      },
+      {
+         "type":"text",
+         "id":"pricingcard_plan_title",
+         "label":"pricingcard plan title"
+      },
+      {
+         "type":"text",
+         "id":"pricingcard_tab_first",
+         "label":"pricingcard tab first"
+      },
+      {
+         "type":"text",
+         "id":"pricingcard_tab_second",
+         "label":"pricingcard tab second"
+      }
+   ],
+   "blocks":[
+      {
+         "name":"Qt Pricing Card",
+         "type":"text",
+         "settings":[
+            {
+               "type":"image_picker",
+               "id":"pricongcard_icon",
+               "label":"pricongcard icon"
+            },
+
+{
+               "type":"image_picker",
+               "id":"pricongcard_icon_second",
+               "label":"pricongcard icon Second"
+            },
+            {
+               "type":"text",
+               "id":"pricongcard_icon_type",
+               "label":"pricongcard icon type"
+            },
+            {
+               "type":"text",
+               "id":"pricingcard_icon_price",
+               "label":"pricingcard icon price"
+            },
+{
+               "type":"text",
+               "id":"pricingcard_icon_price_second",
+               "label":"pricingcard icon price second"
+            },
+{
+               "type":"text",
+               "id":"card_description_first",
+               "label":"card description first"
+            },
+
+{
+               "type":"text",
+               "id":"card_description_second",
+               "label":"card_description second"
+            },
+{
+               "type":"text",
+               "id":"card_description_third",
+               "label":"card_description third"
+            },
+{
+               "type":"text",
+               "id":"card_description_fourth",
+               "label":"card description fourth"
+            },
+
+			{
+               "type":"text",
+               "id":"pricingcard_btn",
+               "label":"pricingcard btn"
+            }
+         ]
+      }
+   ],
+   "presets":[
+      {
+         "name":"Qt Pricing Card",
+         "category":"Pricing Card"
+      }
+   ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

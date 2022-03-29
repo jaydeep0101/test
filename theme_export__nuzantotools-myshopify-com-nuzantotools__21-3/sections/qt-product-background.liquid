@@ -1,0 +1,24 @@
+<img src=" {{ section.settings.background | img_url: 'master' }} " alt="">
+{% schema %}
+  {
+    "name": "qt-product-background",
+    "settings": [
+		{
+			"type": "image_picker",
+			"id": "background",
+			"label": "Background_Image"
+		}
+	],
+	"presets": [
+		{
+			"name": "qt-product-background"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,51 @@
+			<section class="cta-section-wrapper wrd-cover-bg" data-background="{{ section.settings.bgimage | img_url: 'master' }}" style=" background: url({{ section.settings.bgimage | img_url: 'master' }});">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-8 wow fadeInUp" data-wow-duration="1.25s">
+                            <h3 class="wrd-cta-text"> {{ section.settings.ctatext }} </h3>
+                        </div>
+
+                        <div class="col-xl-4 offset-xl-2 col-lg-4 my-auto text-center">
+                            <a href=" {{ section.settings.contactlink }} " class="wrd-cta-button wow fadeInUp" data-wow-duration="1.25s"> {{ section.settings.contacttitle }} <i class="flaticon-farmer"></i></a>
+                        </div>
+                    </div>
+                </div>
+           	</section>
+{% schema %}
+  {
+    "name": "qt-contact-section",
+    "settings": [
+		{
+			"type": "image_picker",
+			"id": "bgimage",
+			"label": "Background Image"
+		},
+		{
+			"type": "text",
+			"id": "ctatext",
+			"label": "contact title"
+		},
+		{
+			"type": "text",
+			"id": "contacttitle",
+			"label": "Button Title"
+		},
+		{
+			"type": "url",
+			"id": "contactlink",
+			"label": "Button Link"
+		}
+	],
+	"presets": [
+		{
+			"name": "qt-contact-section"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

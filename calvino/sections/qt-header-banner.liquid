@@ -1,0 +1,124 @@
+<style>
+  .hero__main {
+    background-image:url('{{section.settings.header_banner_bg_img | img_url: 'master'}}');
+    background-size: cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    object-fit:cover;
+    height: 700px;
+  }
+  
+  
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+.hero__main {
+    height: 600px;
+}
+        
+}
+  
+  @media only screen and (max-width: 992px) {
+ 	.hero__main {
+    height: 600px;
+} 	
+    
+  }
+  
+  
+  
+  
+  @media only screen and (max-width: 575px) {
+  	.hero__main {
+    height: 700px;
+  }
+  }
+</style>
+<section class="hero-section">
+  <div class="hero__main">
+    <div class="container">
+      <div class="row">
+        <div class=" col-xl-5 col-lg-6 col-md-6 custom__padding--all">
+          <div class="hero__main--caption">
+            <span>{{ section.settings.degital_marketing }}</span>
+            <h1>{{ section.settings.header_banner_title }}</h1>
+            <p>{{ section.settings.header_banner_description }}</p>
+            <div class="banner__services--btn">
+              <a href="#" class="header__btn_0 header__banner__btn">{{ section.settings.header_banner_botton }}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-6 custom__padding--all">
+          <div class="hero__main--video-icon">
+          	<a class="popup-youtube popup-video btn-icon" href="https://www.youtube.com/watch?v=bY-mOdgz7zQ"><i class="fas fa-play"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+{% schema %}
+  {
+    "name": "Header Banner",
+    "settings": [
+		{
+			"type" : "text",
+			"id" : "call_us",
+			"label" : "Call us"
+		},
+{
+			"type" : "text",
+			"id" : "call_us_number",
+			"label" : "Call us Number"
+		},
+
+		{
+			"type" : "text",
+			"id" : "call_us_btn",
+			"label" : "Call us Botton"
+		},
+{
+			"type" : "image_picker",
+			"id" : "header_banner_bg_img",
+			"label" : "header banner bg img"
+		},
+	
+	{
+			"type" : "text",
+			"id" : "degital_marketing",
+			"label" : "Degital Marketing"
+		},
+{
+			"type" : "text",
+			"id" : "header_banner_title",
+			"label" : "header banner title"
+		},
+{
+			"type" : "textarea",
+			"id" : "header_banner_description",
+			"label" : "header banner description"
+		},
+
+{
+			"type" : "text",
+			"id" : "header_banner_botton",
+			"label" : "header banner botton"
+		}
+
+
+	],
+	"presets":[
+      {
+         "name":"Header Banner",
+         "category":"Header"
+      }
+   ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

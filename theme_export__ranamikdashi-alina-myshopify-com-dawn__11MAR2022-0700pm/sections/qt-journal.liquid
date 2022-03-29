@@ -1,0 +1,87 @@
+<section class="common__section">
+  <div class="journal">
+    <div class="journal__container">
+      <div class="journal__inner">
+        <div class="journal__title">
+          <h2 class="common__hedding">{{section.settings.heading}}</h2>
+        </div>
+        <div class="journal__items">
+          <div class="row journal__swiper">
+            <div class="swiper-wrapper">
+              {% for article in section.settings.blog.articles %}
+              <div class=" col-6 swiper-slide">
+                <div class="journal__box">
+                  <div class="journal__box--title">
+                    <div class="journal__box-title-items">
+                      <a href="javascript:void(0);" ><h2 class="common__blog--hedding">{{article.title}}</h2></a>
+                    </div>
+                    <div class="journal__box-description">
+                      <a href="javascript:void(0);"><p>{{article.content}}</p></a>
+                    </div>
+                    <div class="shop__now learn_more">
+                      <a href='{{article.url}}' class="common__font--size ">{{section.settings.learn_more_btn}}</a>
+                    </div>
+                  </div>
+                  <div class="journal__box--image">
+                    <div class="journal__image">
+                      {% assign my_article =  article.image.src | image_url: width: 500 %}
+                      <img src="{{my_article}}" alt="{{my_article.alt}}">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-scrollbar"></div>
+            <div class="swiper-pagination" style="position:relative; margin-top:40px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+{% schema %}
+{
+  "name": "Custom Blog Post",
+  "tag": "section",
+  
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Journal",
+      "label": "t:sections.featured-blog.settings.heading.label"
+    },
+	{
+      "type": "text",
+      "id": "learn_more_btn",
+      "default": "Learn More",
+      "label": "sections.featured-blog.settings.learnmor.label"
+    },
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "t:sections.featured-blog.settings.blog.label"
+    }
+   
+  ],
+  "presets": [
+    {
+      "name": "Custom Blog Post",
+      "settings": {
+        "blog": "journal"
+      }
+    }
+  ]
+}
+{% endschema %}

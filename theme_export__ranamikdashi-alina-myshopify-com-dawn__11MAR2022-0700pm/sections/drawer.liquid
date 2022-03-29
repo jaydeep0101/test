@@ -1,0 +1,114 @@
+<section class="drawer" id="drawer-name" data-drawer-target>
+  <div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+  <div class="drawer__wrapper">
+    <div class="drawer__header">
+      <div class="drawer__title">
+        Continue Shopping
+      </div>
+      <button class="drawer__close" data-drawer-close aria-label="Close Drawer"></button>
+    </div>
+    
+    
+    
+    
+    <div class="drawer__content" id="cart__drawer">
+      <div id="cart__drawer_items">
+        <div class="d-flex drawer__items-flex">
+        <div class="pr_feature_img">
+        <img src="{{ product.featured_image | img_url: '100x125'}}">
+		</div>
+        <div >
+          <div class="drawer__items-price-name">
+          <h2>{{product.title | escape}}</h2>
+          <h3>{{ product.price |  money_without_currency  }}</h3>
+            </div>
+          
+        
+        
+        {%- for item in cart.items -%}
+        <div class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
+          <div class="cart-item__details">
+           
+            {%- if item.original_price != item.final_price -%}
+            <div class="cart-item__discounted-prices">
+              <span class="visually-hidden">
+                {{ 'products.product.price.regular_price' | t }}
+              </span>
+              <s class="cart-item__old-price product-option">
+                {{- item.original_price | money -}}
+              </s>
+              <span class="visually-hidden">
+                {{ 'products.product.price.sale_price' | t }}
+              </span>
+            </div>
+            {%- endif -%}
+          </div>
+          <div class="cart-item__quantity">
+            <div class="cart-item__quantity-wrapper">
+              
+              <quantity-input class="quantity">
+                <button class="quantity__button no-js-hidden" name="minus" type="button">
+                  <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: item.product.title | escape }}</span>
+                  {% render 'icon-minus' %}
+                </button>
+                <input class="quantity__input"
+                       type="number"
+                       name="updates[]"
+                       value="{{ item.quantity }}"
+                       min="0"
+                       aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
+                       id="Quantity-{{ item.index | plus: 1 }}"
+                       data-index="{{ item.index | plus: 1 }}"
+                       >
+                <button class="quantity__button no-js-hidden" name="plus" type="button">
+                  <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: item.product.title | escape }}</span>
+                  {% render 'icon-plus' %}
+                </button>
+              </quantity-input>
+
+              <cart-remove-button id="Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}">
+                <a href="{{ item.url_to_remove }}" class="button button--tertiary" aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}">
+                  {% render 'icon-remove' %}
+                </a>
+              </cart-remove-button>
+            </div>
+           
+            </div>
+          </div>
+        {%- endfor -%}
+          </div>
+        </div>
+      </div>
+      </div>
+      
+      
+      
+      
+      <div style="margin-top: 50px">
+        <h4>Total: <span id="cart__total_price">{{ cart.total_price | money_with_currency }}</span></h4>
+        <a id="cart__checkout_btn" href="/checkout" class="btn btn--has-icon-after cart__continue-btn" style="width:100%;">Proceed Checkout</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  fetch('/cart.js')
+  .then((resp) => resp.json())
+  .then((data) => {
+    
+    if(data.items.length > 0) {
+        data.items.forEach(function(product, index) { 
+          document.getElementById('drawer_cart_items').innerHTML = '<img src="' + product.featured_image.url + '" alt="' + product.featured_image.alt + '"><h5>' + product.title + '</h5><p>' + product.quantity + ' x ' + theme.Currency.formatMoney(product.line_price, theme.moneyFormat) + '</p>';
+      	});
+    } else {
+      document.getElementById('drawer_cart_items').innerHTML = '<p>Cart is empty</p>';
+      document.getElementById('drawer_checkout_btn').setAttribute('disabled', 'disabled');
+      document.getElementById('drawer_checkout_btn').style.pointerEvents = 'none';
+    }
+    
+    document.getElementById('drawer_total_amount').innerHTML = theme.Currency.formatMoney(data.total_price, theme.moneyFormat);
+    
+  });
+</script>

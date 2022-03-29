@@ -1,0 +1,181 @@
+<style>
+  .banner {
+    background-image:url('{{section.settings.bannerImage | img_url: 'master'}}');
+     background-size: cover;
+  	 background-position:center;
+  	 background-repeat:no-repeat;
+     object-fit:cover;
+  }
+</style>
+
+<section>
+  <div class="banner">
+    <div class="container-fluid">
+      <div class="banner__inner">
+        <div class="banner__items">
+        	<div class="banner__text">
+          <h2>{{section.settings.bannerTitle}}</h2>
+          <h3>{{section.settings.bannerSubTitle}}</h3>
+          <p class="banner__items--description">{{section.settings.bannerDescription}}</p>
+          <div class="banner__btn commun__button">
+            <a href="#"> {{section.settings.bannerButtonName}}</a>
+          </div>
+        </div>
+        </div>
+        
+
+        <div class="popupfix">
+        <div id="popup1" class="overlay">
+			<div class="popup">
+                <a class="close"  onclick="myFunction()" href="#">&times;</a>
+                <div class="content">
+                    10% for your<br>
+					first order
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bal__icon">
+          <span>
+            <a href="#one" class="fancybox">
+          	<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="24" transform="matrix(1 0 0 -1 0 48)" fill="#F4F6FA"/>
+            <path d="M25 16.5C25 16.3674 24.9473 16.2402 24.8536 16.1464C24.7598 16.0527 24.6326 16 24.5 16C24.3674 16 24.2402 16.0527 24.1464 16.1464C24.0527 16.2402 24 16.3674 24 16.5V18.027C22.8998 18.15 21.8836 18.6742 21.1456 19.4995C20.4077 20.3247 19.9998 21.393 20 22.5V28.414L18.414 30H30.586L29 28.414V22.5C29.0002 21.393 28.5923 20.3247 27.8544 19.4995C27.1164 18.6742 26.1002 18.15 25 18.027V16.5ZM24.5 15C24.8978 15 25.2794 15.158 25.5607 15.4393C25.842 15.7206 26 16.1022 26 16.5V17.207C28.309 17.86 30 19.982 30 22.5V28L33 31H16L19 28V22.5C19 21.3027 19.3906 20.138 20.1125 19.1828C20.8344 18.2275 21.8481 17.5339 23 17.207V16.5C23 16.1022 23.158 15.7206 23.4393 15.4393C23.7206 15.158 24.1022 15 24.5 15ZM24.5 34C23.9237 34.0001 23.365 33.8011 22.9185 33.4367C22.4721 33.0722 22.1653 32.5647 22.05 32H23.085C23.1881 32.293 23.3796 32.5468 23.633 32.7263C23.8865 32.9058 24.1894 33.0022 24.5 33.0022C24.8106 33.0022 25.1135 32.9058 25.367 32.7263C25.6204 32.5468 25.8119 32.293 25.915 32H26.95C26.8347 32.5647 26.5279 33.0722 26.0815 33.4367C25.635 33.8011 25.0763 34.0001 24.5 34Z" fill="black"/>
+            </svg>
+            </a>
+          </span>
+        </div>
+		<div id="one" style="display:none">
+          <div class="">
+            <h2>{{ section.settings.popup_title }}</h2>
+            <p>
+            	{{section.settings.popup_description}}
+            </p>
+            <div class="fancy__form">
+              <form>
+                
+                <div class="form__label">
+                  <label>{{section.settings.popup_name}}</label>
+                </div>
+                
+                <div class="input__text">
+                  <input type="text" />
+                </div>
+                
+                <div class="form__label">
+                  <label>{{section.settings.popup_email}}</label>
+                </div>
+                
+                <div class="input__text">
+                  <input type="email" />
+                </div>
+                
+                <div class="form__label">
+                  <label>{{section.settings.popup_message}}</label>
+                </div>
+                
+                <div class="input__text">
+                  <textarea rows="4" cols="50" ></textarea>
+                </div>
+                <div class="commun__button text_message">
+                  <a href="#">{{section.settings.popup_send_message}}</a>
+                </div>
+              </form>
+              
+            </div>
+            
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+{% schema %}
+  {
+    "name": "Banner Section",
+    "settings": [
+		{
+		"type":"text",
+		"id":"bannerTitle",
+		"label":"Banner Title"
+		},
+		{
+			"type":"text",
+			"id":"bannerSubTitle",
+			"label":"Banner Sub Title"
+		},
+		{
+"type":"richtext",
+"id":"bannerDescription",
+"label":"Banner Text"
+},
+
+{
+"type":"text",
+"id":"bannerButtonName",
+"label":"Banner Button Name"
+},
+
+{
+"type":"image_picker",
+"id":"bannerImage",
+"label":"Banner Image"
+},
+
+{
+"type": "text",
+"id": "popup_title",
+"label": "Popup Title"
+},
+
+{
+"type": "textarea",
+"id": "popup_description",
+"label": "Popup Description"
+},
+
+{
+"type": "text",
+"id": "popup_name",
+"label": "Popup Name"
+},
+{
+"type": "text",
+"id": "popup_email",
+"label": "Popup Email"
+},
+
+{
+"type": "text",
+"id": "popup_message",
+"label": "Popup Massage"
+},
+
+{
+"type": "text",
+"id": "popup_send_message",
+"label": "Popup Send Massage"
+}
+
+	],
+	"presets" : [
+		{
+		"name" : "Banner Section",
+		"category":"Banner"
+		}
+	]
+
+
+
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

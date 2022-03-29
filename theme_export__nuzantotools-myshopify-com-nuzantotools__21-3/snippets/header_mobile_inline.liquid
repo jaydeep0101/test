@@ -1,0 +1,161 @@
+<!-- tt-mobile-header -->
+<div class="tt-mobile-header-inline-stuck-{{product.handle}} tt-mobile-header tt-mobile-header-inline tt-mobile-header-inline-stuck{% unless item.header_sticky_header %} disabled{% endunless %}">
+  <div class="container-fluid">
+    <div class="tt-header-row">
+      
+      
+      <div class="tt-logo-container">
+        <a class="tt-logo tt-logo-alignment" href="/">
+          {%- if headerlogomobile contains "title_" -%}<h2>{{ headerlogomobile | split:"title_" | last }}</h2>
+          {%- else -%}<img src="{{ headerlogomobile }}"
+                           srcset="{{ headerlogomobile }} 1x, {{ headerlogomobileretina }} 2x"
+                           alt="{{ headerlogomobilealt }}"
+                           class="tt-retina">
+          {%- endif -%}
+        </a>
+      </div>
+      
+      <div class="tt-mobile-parent-menu-icons">
+        <div class="tt-mobile-parent-language  tt-parent-box">
+          <div class="tt-language tt-dropdown-obj">
+            <button class="tt-dropdown-toggle" data-tooltip="language" data-tposition="bottom">
+              En
+            </button>
+          </div>
+        </div>
+        
+        <!-- search -->
+        <div class="tt-mobile-parent-search tt-parent-box">
+          {%- if settings.header_design != "header_type_1" and settings.header_design != "header_type_5" -%}
+          <!-- tt-search -->
+          <div class="tt-search tt-dropdown-obj">
+            <button class="tt-dropdown-toggle"
+                    data-tooltip="{{ 'general.tooltip_texts.header_search' | t }}"
+                    data-tposition="bottom"
+                    >
+              <i class="icon-f-85"></i>
+            </button>
+            <div class="tt-dropdown-menu">
+              <div class="container">
+                <form action="/search" method="get" role="search">
+                  <div class="tt-col">
+                    <input type="hidden" name="type" value="product" />
+                    <input class="tt-search-input"
+                           type="search"
+                           name="q"
+                           placeholder="{{ 'general.search.place_holder' | t }}"
+                           aria-label="{{ 'general.search.place_holder' | t }}">
+                    <button type="submit" class="tt-btn-search"></button>
+                  </div>
+                  <div class="tt-col">
+                    <button class="tt-btn-close icon-f-84"></button>
+                  </div>
+                  <div class="tt-info-text">{{ 'general.search.header_message' | t }}</div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- /tt-search -->
+          {%- endif -%}
+        </div>
+        <!-- /search -->
+        
+        
+        
+  {% comment %}
+      {%- if item.show_customer_links -%}
+      <!-- account -->
+      <div class="tt-mobile-parent-account tt-parent-box">
+      	{%- include "menu-customer" -%}
+      </div>
+      <!-- /account -->
+      {%- endif -%}
+        
+        {% endcomment %}
+        
+       {%- if item.show_customer_links -%}
+<!-- tt-account -->
+<div class="tt-mobile-parent-account tt-parent-box ">
+  <div class="tt-account tt-account-mobile-view tt-dropdown-obj">
+    <button class="tt-dropdown-toggle"
+            data-tooltip="{{ 'general.tooltip_texts.header_account' | t }}"
+            data-tposition="bottom"
+            >
+      {% if settings.header_design == "header_type_5" %}
+      {% if item.show_account_icon %}<i class="icon-f-94"></i>{% endif %}
+      {% if item.account_icon_text != "" %}<span class="tt-dropdown-toggle__text">{{ item.account_icon_text }}</span>{% endif %}
+      {% else %}<i class="icon-f-94"></i>
+      {% endif %}
+     
+    </button>
+    <div class="tt-dropdown-menu">
+      <div class="tt-mobile-add">
+        <button class="tt-close">{{ "layout.customer.close" | t }}</button>
+      </div>
+      <div class="tt-dropdown-inner">
+        <ul>
+          {%- if shop.customer_accounts_enabled and customer -%}<li><a href="/account"><i class="icon-h-36"></i>{{ "layout.customer.account" | t }}</a></li>{%- endif -%}
+
+          {%- if shop.customer_accounts_enabled -%}
+          {%- if customer -%}<li><a href="/account/logout"><i class="icon-f-76"></i>{{ "layout.customer.log_out" | t }}</a></li>
+          {%- else -%}<li><a href="/account/login"><i class="icon-f-77"></i>{{ "layout.customer.sign_in" | t }}</a></li>
+          <li><a href="/account/register"><i class="icon-f-94"></i>{{ "layout.customer.register" | t }}</a></li>
+          {%- endif -%}
+          {%- endif -%}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /tt-account -->
+{%- endif -%}
+        
+        
+        <!--    Wishlist    -->
+        <div class="tt-mobile-parent-wishlist  tt-parent-box">
+          <div class="tt-wishlist tt-dropdown-obj">
+            <a href="{{ section.settings.wishlistlink }}">
+              <button class="tt-dropdown-toggle" data-tooltip="Wishlist" data-tposition="bottom">
+                <i class="icon-h-37"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      <!--    /Wishlist    -->
+        
+        {%- unless settings.catalogue_mode -%}
+        {%- if template != "cart" -%}
+        <!-- cart -->
+        <div class="tt-mobile-parent-cart tt-parent-box"></div>
+        <!-- /cart -->
+        {%- endif -%}
+        {%- endunless -%}
+        
+     
+      
+
+      
+    
+      
+
+      
+      
+      {%- if item.show_options_links -%}
+      <!-- currency -->
+      <div class="tt-mobile-parent-multi tt-parent-box">
+      	{%- include "menu-currency" -%}
+      </div>
+      <!-- /currency -->
+      {%- endif -%}
+      
+       </div>
+      
+      <div class="tt-mobile-parent-menu">
+        <div class="tt-menu-toggle mainmenumob-js">
+          {% include "svg-mobile-menu-inline" %}
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>

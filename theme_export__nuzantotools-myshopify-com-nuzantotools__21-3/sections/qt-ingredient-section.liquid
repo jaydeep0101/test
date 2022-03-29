@@ -1,0 +1,139 @@
+
+
+<section class="ingredient-section" id="test2" {% if product.handle == "variety-12-pack" %}style="display : none;"{% endif %}>
+                <div class="container"> 
+                    <div class="row">
+                        <div class="col-lg-7 col-md-9">
+                            <div class="ingredient-content">
+                                <h1> {{ section.settings.title }} </h1>
+                                <p> {{ section.settings.text1 }}
+                                </p>
+
+                                <div>
+                                    <p> {{ section.settings.text2 }} </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 offset-lg-2 col-md-3">
+                            <div class="ingredient-list">
+                                <img src=" {{ section.settings.mainimage | img_url: 'master' }} " alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Logo Image -->
+                <div class="brand-logo-image-wrapper">
+                    <div class="container">
+                        <div class="row align-items-center text-center">
+                            <div class="col-lg-2 col-md-2 col-6">
+                                <div class="brand-logo-image">
+                                    <img src="{{ section.settings.sugarimage | img_url: 'master' }}" alt="">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-6">
+                                <div class="brand-logo-image">
+                                    <img src="{{ section.settings.veganimage | img_url: 'master' }}" alt="">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-6">
+                                <div class="brand-logo-image">
+                                    <img src="{{ section.settings.plantimage | img_url: 'master' }}" alt="">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-6">
+                                <div class="brand-logo-image">
+                                    <img src="{{ section.settings.paleoimage | img_url: 'master' }}" alt="">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-6">
+                                <div class="brand-logo-image">
+                                    <img src="{{ section.settings.glutenimage | img_url: 'master' }}" alt="">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-6">
+                                <div class="brand-logo-image">
+                                    <img src="{{ section.settings.nongemoimage | img_url: 'master' }}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Logo Image End -->
+            </section>
+            
+
+{% schema %}
+  {
+    "name": "qt-ingredient-section",
+    "settings": [
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title"
+		},
+		{
+			"type": "text",
+			"id": "text1",
+			"label": "Text-1"
+		},
+		{
+			"type": "text",
+			"id": "text2",
+			"label": "Text-2"
+		},
+		{
+			"type": "image_picker",
+			"id": "mainimage",
+			"label": "Main Image"
+		},
+		{
+			"type": "image_picker",
+			"id": "sugarimage",
+			"label": "Image 1"
+		},
+		{
+			"type": "image_picker",
+			"id": "veganimage",
+			"label": "Image 2"
+		},
+		{
+			"type": "image_picker",
+			"id": "plantimage",
+			"label": "Image 3"
+		},
+		{
+			"type": "image_picker",
+			"id": "paleoimage",
+			"label": "Image 4"
+		},
+		{
+			"type": "image_picker",
+			"id": "glutenimage",
+			"label": "Image 5"
+		},
+		{
+			"type": "image_picker",
+			"id": "nongemoimage",
+			"label": "Image 6"
+		}
+	],
+	"presets": [
+		{
+			"name": "qt-ingredient-section"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

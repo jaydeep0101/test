@@ -1,0 +1,64 @@
+<section class="measuring__padding">
+  <div class="rings">
+    <div class="containe-fluid">
+      <div class="rings__inner">
+        <div class="rings__items">
+          <h2 class="common__hedding">{{section.settings.measuring_name}}</h2>
+          <div class="row">
+            {% for block in section.blocks %}
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="rings__items--box">
+                <div class="rings__items--box-title">
+                  <h2>{{block.settings.measuring_title}}</h2>
+                </div>
+                <div class="rings__items--box-description">
+                  <p>{{block.settings.measuring_description}}</p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  		</div>
+</section>
+
+{% schema %}
+  {
+    "name": "QT Measuring",
+    "settings": [
+		{
+			"type":"text",
+			"id":"measuring_name",
+			"label":"Measuring Name"	
+		}
+	],
+	"blocks":[
+      {
+         "name":"QT Measuring",
+         "type":"custom",
+         "settings":[
+            {
+               "type":"textarea",
+               "id":"measuring_description",
+               "label":"measuring Description"
+            },
+            {
+               "type":"text",
+               "id":"measuring_title",
+               "label":"Measuring Title"
+            }
+         ]
+      }
+   ],
+   "presets":[
+      {
+         "name":"QT Measuring",
+         "category":"Measuring"
+      }
+   ]
+  }
+{% endschema %}
+
+

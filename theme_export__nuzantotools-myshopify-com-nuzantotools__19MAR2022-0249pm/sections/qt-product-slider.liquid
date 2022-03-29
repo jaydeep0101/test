@@ -1,0 +1,118 @@
+<section class="instagram-slider-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="wrd-section-title-wrapper text-center">
+                                <div class="wrd-section-title-content">
+                                    <h2 class="wrd-section-title"> {{ section.settings.title }} </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="instagram-slider-wrapper">
+
+                    <div class="instagram-item-wrapper">
+                        <a href="#" class="instagram-item wrd-cover-bg" style=" background: url({{ section.settings.image1 | img_url: 'master' }}); background-size: cover;">
+                            <div class="instagram-icon wrd-transition">
+                                <div class="wrd-table-cell">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="instagram-item-wrapper">
+                        <a href="#" class="instagram-item wrd-cover-bg"
+                             style=" background: url({{ section.settings.image2 | img_url: 'master' }}); background-size: cover;">
+                            <div class="instagram-icon wrd-transition">
+                                <div class="wrd-table-cell">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="instagram-item-wrapper">
+                        <a href="#" class="instagram-item wrd-cover-bg"
+                             style=" background: url({{ section.settings.image3 | img_url: 'master' }}); background-size: cover;">
+                            <div class="instagram-icon wrd-transition">
+                                <div class="wrd-table-cell">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="instagram-item-wrapper">
+                        <a href="#" class="instagram-item wrd-cover-bg"
+                             style=" background: url({{ section.settings.image4 | img_url: 'master' }}); background-size: cover;">
+                            <div class="instagram-icon wrd-transition">
+                                <div class="wrd-table-cell">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="instagram-item-wrapper">
+                        <a href="#" class="instagram-item wrd-cover-bg"
+                             style=" background: url({{ section.settings.image5 | img_url: 'master' }}); background-size: cover;">
+                            <div class="instagram-icon wrd-transition">
+                                <div class="wrd-table-cell">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+{% schema %}
+  {
+    "name": "qt-product-slider",
+    "settings": [
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title"
+		},
+		{
+			"type": "image_picker",
+			"id": "image1",
+			"label": "Slide Image 1"
+		},
+		{
+			"type": "image_picker",
+			"id": "image2",
+			"label": "Slide Image 2"
+		},
+		{
+			"type": "image_picker",
+			"id": "image3",
+			"label": "Slide Image 3"
+		},
+		{
+			"type": "image_picker",
+			"id": "image4",
+			"label": "Slide Image 4"
+		},
+		{
+			"type": "image_picker",
+			"id": "image5",
+			"label": "Slide Image 5"
+		}
+	],
+	"presets":[
+		{
+			"name": "qt-product-slider"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

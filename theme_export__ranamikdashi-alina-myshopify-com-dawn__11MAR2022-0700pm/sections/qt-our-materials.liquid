@@ -1,0 +1,103 @@
+<section class="our-materials">
+  <div class="materials">
+    <div class="container-fluid">
+      <div class="materials__inner">
+        <div class="materials__block">
+          <div class="row">
+            {% if section.settings.con_check == true %}
+            <div class="col-12 col-lg-6">
+              <div class="materials__text">
+                <div class="materials__text--title">
+                  <h2 class="ourlewellery__collection--title">{{section.settings.materials_text}}</h2>
+                </div>
+                <div class="materials__text--description">
+                  <p class="common__font--philosophy ">{{section.settings.materials_description}}</p>
+                </div>
+                <div class="materials__text--button">
+                  <a href="#" class="common__font--philosophy">{{section.settings.learn_more_btn}}</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="materials__image">
+              	<img src="{{section.settings.materials_image | img_url: "master"}}" alt="{{section.settings.materials_materials_image.alt}}">
+              </div>
+            </div>
+            
+            {% else %}
+            <div class="col-12 col-lg-6">
+              <div class="materials__image">
+              	<img src="{{section.settings.materials_image | img_url: "master"}}" alt="{{section.settings.materials_materials_image.alt}}">
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="materials__text">
+                <div class="materials__text--title">
+                  <h2 class="ourlewellery__collection--title">{{section.settings.materials_text}}</h2>
+                </div>
+                <div class="materials__text--description">
+                  <p class="common__font--philosophy ">{{section.settings.materials_description}}</p>
+                </div>
+                <div class="materials__text--button">
+                  <a href="#" class="common__font--philosophy">{{section.settings.learn_more_btn}}</a>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+{% schema %}
+  {
+    "name": "QT Our Materials",
+    "settings": [
+		{
+			"type" : "text",
+			"id" : "materials_text",
+			"label": "Materials Tiitle"
+		},
+		{
+			"type" : "textarea",
+			"id" : "materials_description",
+			"label" : "Materials Description"
+		},
+		{
+			"type" : "text",
+			"id" : "learn_more_btn",
+			"label" : "Learn More"
+		},
+		{
+			"type" : "image_picker",
+			"id" : "materials_image",
+			"label" : "Materials Image"
+		},
+		{
+			"type" : "checkbox",
+			"id" : "con_check",
+			"label" : "Right",
+			"default" : false
+		}
+	],
+	"presets" : [
+		{
+			"name" : "QT Our Materials",
+			"category" : "Materials"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+
+
+{% endjavascript %}

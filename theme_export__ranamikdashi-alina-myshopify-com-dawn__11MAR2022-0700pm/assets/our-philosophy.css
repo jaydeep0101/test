@@ -1,0 +1,1118 @@
+.banner__image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.ourmission__box--image .ourmission__second--image {
+  height:400px;
+  width:500px;
+}
+
+.ourmission__box--image img{
+  width:480px;
+  height:600px;
+  object-fit:cover;
+}
+
+
+.philosophy__banner--description {
+  text-align:center;
+}
+
+.philosophy__banner--title h2 {
+  font-style: normal;
+  font-size: 45px;
+  line-height: 130%;
+  text-align: center
+    color:var(--primary);
+      padding-top:80px;
+      font-weight: 700;
+      }
+
+.philosophy__banner--sortdescription {
+  margin: 0 435px;
+}
+
+.common__font--philosophy {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 140%;
+
+}
+
+.philosophy__banner--first-decsription {
+  padding-top:20px;
+  padding-bottom: 30px;
+}
+
+#shopify-section-template--15604048822516__16426615267a631386 .philosophy__banner--first-decsription {
+	padding-bottom: 0;
+}
+
+
+
+.philosophy__banner--second-decsription {
+  padding-top:30px;
+}
+
+.ourmission__title {
+  text-align:center;
+  padding-top:80px;
+}
+
+.ourmission__boxes {
+  padding-top:30px;
+}
+
+.ourmission__second--box {
+  padding-top:245px;
+}
+
+.ourmission__third--box {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.ourmission__box--third-image {
+	margin-top:60px;
+}
+
+.ourmission__boxes .row {
+  justify-content:center;
+}
+
+.ourjewellery__image img {
+  height:100%;
+  width:100%;
+  height: 667px;
+  object-fit: cover;
+}
+
+
+.ourjewellery__items {
+  padding-top:57px;
+}
+
+.ourlewellery__collection--title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.ourlewellery__collection--description {
+  padding-top:30px;
+  padding-right:270px;
+}
+
+
+.ourjewellery__items .row>* {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.ourjewellery__image {
+  padding-right:50px;
+}
+
+.ourlewellery__collection .product__name h2{
+  font-size:12px;
+/*   padding-right: 45px; */
+  display:inline-block;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  text-align: initial;
+}
+
+.ourswiper  {
+  padding-top:30px;
+}
+
+
+.ourlewellery__collection .product__price {
+  text-align:start;
+}
+
+.metarana__image img{
+  width:100%;
+  object-fit:cover;
+}
+
+.metarana__text {
+  padding-right: 171px;
+  padding-top: 198px;
+  padding-left: 89px;
+}
+
+.metarana__image {
+  padding-top:92px;
+}
+
+
+.metarana__text--title h2 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.metarana__text--description {
+  padding-top:30px;
+}
+
+.materials__image {
+  height : 100%;
+}
+
+.materials__image img{
+  width:100%;
+  height: 500px;
+/*   height: 100%; */
+  object-fit:cover;
+}
+
+.materials__text {
+  padding:149px 160px 149px 160px ;
+}
+
+.materials__text, .materials__text h2 {
+  background: var(--primary);
+    color: var(--secondry);
+      }
+
+.materials__text a{
+  text-decoration:none;
+  color: var(--secondry);
+    }
+
+.materials .row>* {
+  padding-left:0;
+  padding-right:0;
+}
+
+.materials__text--description, .materials__text--button {
+  padding-top:30px;
+}
+
+.common__font--padding {
+  padding-right: 73px;
+}
+
+.materials__block {
+  padding-top:80px;
+}
+
+
+
+
+
+
+/* 
+@media(max-width:375px) {
+  .metarana__image img {
+    width: 100%;
+    height: 450px;
+    padding-right: 20px;
+  }
+  .metarana__text--title h2 {
+    text-align: center;
+  }
+  .ourlewellery__collection--title {
+    text-align:center;
+    margin-top: 50px;
+  }
+  .ourmission__box--image img {
+    width :335px;
+    height :418px;
+    width:100%;
+  }
+  .ourmission__box--image .ourmission__second--image {
+    height: 268px;
+    width: 335px;
+    width:100%;
+  }
+  
+  .ourlewellery__collection--description {
+    padding-top: 30px;
+    
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .materials__text {
+    padding: 90px 20px 84px 20px;
+  }
+  .materials__image img {
+    width: 100%;
+    height: 234px;
+    object-fit: cover;
+  }
+
+
+  .ourjewellery__image {
+    padding-right: 0px; 
+  }
+
+  .ourmission__boxes {
+    padding: 30px 20px 0 20px;
+  }
+
+  .ourmission__box--title {
+    padding-top:21px;
+  }
+
+  .ourmission__second--box {
+    padding-top: 21px;
+  }
+}
+
+
+
+ */
+
+
+
+
+.process__row {
+  
+  justify-content: space-around;
+}
+
+.process__boxes img {
+  width:100%;
+}
+
+.process__box--image img{
+  width: 480px;
+  height: 600px;
+  object-fit: cover;
+}
+
+.process__box--image-second img {
+  width: 590px;
+  height: 472px;
+  object-fit: cover;
+}
+
+.process__box--image-fourth img {
+  width: 393px;
+  height: 491px;
+  object-fit: cover;
+}
+
+.process__title .common__hedding{
+  text-align:center;
+}
+
+.process__title {
+  padding-top:60px;
+}
+
+.process__box--first,.process__box--third {
+  padding-top:30px;
+}
+
+.process__box--second {
+  padding-top:94px;
+}
+
+.process__box--title {
+  padding-top:28px;
+}
+
+.process__box--description {
+  padding-top:20px;
+}
+
+.process__box--fourth {
+  padding-top:0;
+  margin-top: -11px;
+
+}
+
+/* .process__box--image img {
+  width: 335px;
+  height: 418px;
+  object-fit: cover;
+} */
+
+
+
+#shopify-section-template--15604048822516__1642662239e8469575 .process__title {
+    padding-top: 80px;
+}
+
+#shopify-section-template--15604048822516__1642663642e4fcadd0 .materials__block {
+    padding-top: 52px;
+    padding-bottom: 80px;
+
+}
+
+#shopify-section-template--15604048822516__1642663642e4fcadd0 .materials__text {
+    padding: 152px 160px 151px 160px;
+}
+
+.materials__text--button .common__font--philosophy{
+	letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+
+
+.sustainability__box .row > div {
+  padding-top:80px;
+}
+
+.sustainability__box {
+  padding:0 304px 80px 331px;
+}
+
+.another__image img{
+  width:100%;
+  width:410px;
+  height:512px;
+  object-fit:cover;
+} 
+
+.anothertitle__box {
+  margin: 0px 100px 0 100px;
+}
+
+.another__title {
+	padding-top:183px;
+  padding-left:115px;
+}
+
+.another__image {
+	padding-top:80px;
+}
+
+.another__description {
+    padding-top: 30px;
+    padding-left: 115px;
+    padding-right: 85px;
+}
+
+.process__box--title h2 {
+	font-size:18px;
+  line-height: 100%;
+    font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+
+
+
+  
+  
+/*  Journal  */
+  .journal__image img {
+    width: 330px;
+    height: 410px;
+  }
+  
+  .journal__box-description p  {
+  	font-size:13px;
+  }
+
+  .journal__banner img{
+  	width:100%;
+    object-fit:cover;
+  }
+
+.journal__items {
+	padding-bottom: 80px;
+}
+
+
+
+
+
+#shopify-section-template--15604284457204__1642668697c9f00769 .philosophy__banner--first-decsription {
+	padding-bottom: 0;
+}
+
+#shopify-section-template--15604284457204__1642673208e73e3607 .process__title {
+    padding-top: 0px;
+}
+
+#shopify-section-template--15604284457204__1642671971c1292c6f .anothertitle__box {
+	padding-bottom: 119px;
+}
+
+
+.process__box--first, .process__box--third {
+	padding-top: 0;
+}
+
+.process__box--second {
+    padding-top: 63px;
+}
+
+.process__box--third {
+    padding-top: 36px;
+}
+
+#shopify-section-template--15604284457204__164267367870b83213 .materials__block {
+    padding-top: 57px;
+  padding-bottom: 80px;
+}
+
+#shopify-section-template--15604284457204__164267367870b83213 .materials__image img {
+	height: 100%;
+}
+
+ #shopify-section-template--15604581662964__16426767502fddaab5 .journal__box {
+    margin-top: 0px;
+	}
+
+.anothertitle__box--desktop {
+  display: inherit;
+  }
+  
+  .anothertitle__box--mobile {
+  	display: none;
+  }
+
+@media(max-width:1024px) {
+  .philosophy__banner--sortdescription {
+  	margin: 0 39px;
+  }
+  
+  .ourmission__second--box {
+    padding-top: 150px;
+  }
+  
+  .ourmission__box--image .ourmission__second--image {
+    width: 100%;
+  }
+  
+  .ourmission__box--image img {
+    width: 100%;
+  }
+  
+  .ourlewellery__collection--description {
+    padding-right: 200px;
+  }
+  
+  .materials__text {
+    padding: 100px 100px 100px 100px;
+  }
+  
+  .metarana__text {
+    padding-right: 112px;
+    padding-top: 165px;
+    padding-left: 50px;
+ }
+  
+  .footer-block__newsletter {
+    margin-top: 200px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  #shopify-section-template--15596897566964__1642588133bc09fbec .philosophy__banner--sortdescription-vertical-line {
+    width: 700px;
+  }
+  
+  
+  .footer__common--padding h2, .footer__bottom--box h2 {
+  	font-size: 16px;
+  }
+  
+  .list-menu--inline {
+    flex-wrap: unset !important;
+ }
+  
+  
+  
+  .process__box--image img {
+  	width: 100%;
+  }
+  
+  #shopify-section-template--15604048822516__1642663642e4fcadd0 .materials__text {
+    padding: 100px;
+	}
+  
+  .materials__image img {
+    height: 415px;
+  }
+  
+  #shopify-section-template--15604048822516__1642662239e8469575 .process__title {
+    padding-top: 50px;
+	}
+  
+  
+  .sustainability__box {
+    padding: 0 150px 80px 150px;
+	}
+  
+  .anothertitle__box {
+    margin: 0 20px;
+}
+  
+  .another__description {
+    padding-left: 85px;
+}
+  
+  .faq {
+    		padding:0 39px !important;
+		}
+  
+
+}
+
+
+@media(max-width:768px){
+
+  .ourmission__box--image img {
+    width :335px;
+    height :418px;
+  }
+  .ourmission__box--image .ourmission__second--image {
+    height: 268px;
+    width: 335px;
+  }
+  .philosophy__banner--title h2 {
+    font-size: 30px;
+  }
+
+  .philosophy__banner--sortdescription {
+    margin: 0 39px;
+  }
+  .philosophy__banner--first-decsription {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .philosophy__banner--second-decsription {
+    padding-top: 20px;
+  }
+  
+  
+  .ourmission__title {
+    padding-top: 50px;
+  }
+
+  .ourmission__second--box {
+    padding-top: 150px;
+  }
+  .ourmission__third--box {
+    padding-top:30px;
+  }
+  .ourswiper {
+    padding-left:20px;
+  }
+
+  .metarana__box .row .col-md-3 {
+    display:none;
+  }
+  
+  .ourjewellery__items {
+  	padding-top: 86px;
+    position: relative;
+  }
+  
+ 
+
+  .metarana__text {
+    padding-right: 45px;
+    padding-top: 50px;
+    padding-left: 30px;
+  }
+  .metarana__image {
+    padding-left:20px;
+    padding-top: 100px;
+  }
+
+  .footer-block__newsletter {
+    margin-top: 120px;
+    padding-left: 216px;
+    padding-right: 217px;
+    padding-bottom: 140px;
+	  }
+
+  .metarana__image img {
+    width: 100%;
+    height: 450px;
+  }
+
+  #shopify-section-template--15596897566964__16425888375ac8a403 .ourlewellery__collection--title {
+    font-style: normal;
+    text-align: center;
+/*     padding-top:21px; */
+    
+        position: absolute;
+    top: 31px;
+    left: 42%;
+  }
+  
+  #shopify-section-template--15596897566964__1642590263e178b5fe .materials__block .row {
+  	flex-direction: column-reverse;
+  }
+
+  .ourlewellery__collection--description {
+    padding-top: 0px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .ourjewellery__image {
+    padding-right: 0;
+  }
+  
+  .ourmission__box--third-image {
+  	margin-top:0;
+  }
+  
+  .materials__text {
+    padding: 50px 20px 50px 20px;
+  }
+  
+  .philosophy__banner--title h2 {
+  	padding-top: 50px;
+  }
+  
+  .ourlewellery__collection .product__name h2 {
+  	    font-size: 16px;
+  }
+  
+  .ourlewellery__collection--title {
+    font-size: 20px;
+  }
+  
+  .materials__text--description, .materials__text--button {
+  	padding-top: 20px;
+  }
+  
+  .metarana__text--title h2 {
+  	font-size: 20px;
+  }
+  
+  .metarana__text--title {
+  	position: relative;
+    left: -25%
+  }
+  
+  #shopify-section-template--15604581662964__16426767502fddaab5 .journal__box {
+    margin-top: 20px;
+	}
+  
+  #shopify-section-template--15604581662964__16426767502fddaab5 .journal__title {
+  margin-top: 0;
+}
+  
+  #shopify-section-template--15604581662964__16426767502fddaab5 .journal__items {
+    padding-bottom: 50px;
+}
+
+
+
+}
+
+
+
+@media(max-width:768px) {
+  .process__box--image img {
+    width: 335px;
+    height: 418px;
+    object-fit: cover;
+  }
+
+  .process__box--image-second img {
+    height: 268px;
+  }
+
+  .process__box--image-fourth img {
+    width: 292px;
+    height: 365px;
+  }
+
+  .process__box .common__font--padding {
+    padding-right: 7px;
+  }
+}
+
+
+@media(max-width:768px) {
+  .sustainability__box {
+    padding-top:50px;
+  }
+
+  .sustainability__box {
+    padding:0 57px 0 55px;
+  }
+
+  .another__image img{
+    width:335px;
+    height:418px;
+    object-fit:cover;
+  } 
+
+  .anothertitle__box {
+    padding: 59px 20px 0 20px;
+  }
+  
+  .another__title {
+	padding-top:0px;
+    padding-left:0px;
+}
+
+  .another__image {
+	padding-top:0px;
+}
+  
+  
+  .another__description {
+/*     padding-top: 30px; */
+    padding-left: 0px;
+    padding-right: 58px;
+}
+  
+  .another__title .ourlewellery__collection--title {
+  
+  	text-align:left
+  }
+  
+ #shopify-section-template--15604048822516__1642662239e8469575 .process {
+    background: -webkit-linear-gradient(top, #F4F6FA 30%, #ffffff 10%);
+}
+  
+  .process__box--title {
+    padding-top: 24px;
+}
+
+  
+  .materials__image img {
+    height: 480px;
+	}
+  
+  #shopify-section-template--15604048822516__1642663642e4fcadd0 .materials__text, #shopify-section-template--15596897566964__1642590263e178b5fe .materials__text{
+    padding: 50px 20px;
+}
+  
+  #shopify-section-template--15604048822516__1642663642e4fcadd0 .materials__block {
+    padding-top: 35px;
+    padding-bottom: 0px;
+}
+  
+  
+  .anothertitle__box {
+    margin: 0 0px;
+}
+  
+  #shopify-section-template--15604284457204__1642671971c1292c6f .another__image img {
+    width: 100%;
+  }
+  
+  #shopify-section-template--15604284457204__1642669910efd46173 .sustainability__box {
+  	padding-bottom: 118px;
+  }
+  
+  #shopify-section-template--15604284457204__1642671971c1292c6f .anothertitle__box {
+    padding-bottom: 0px;
+}
+  
+  #shopify-section-template--15604284457204__1642673208e73e3607 .process__boxes {
+  	padding-top: 58px;
+    
+  }
+  
+  .process__box--second {
+    padding-top: 165px;
+ }
+  
+  #shopify-section-template--15604284457204__1642673208e73e3607 .process__box--image-second img {
+  	width: 100%;
+        height: 253px;
+  }
+  
+  .process__box--fourth {
+    padding-top: 0;
+    margin-top: 30px;
+}
+
+.process__box--third {
+    padding-top: 80px;
+}
+  
+  #shopify-section-template--15604284457204__1642673208e73e3607 .process__box--title {
+    padding-top: 23px;
+}
+  
+  #shopify-section-template--15604284457204__164267367870b83213 .materials__block {
+    padding-top: 37px;
+    padding-bottom: 0px;
+}
+  
+  #shopify-section-template--15604284457204__164267367870b83213 .materials__image img {
+    height: 480px;
+}
+
+}
+
+
+@media(max-width:575px) {
+	#shopify-section-template--15596897566964__1642588133bc09fbec .philosophy__banner--sortdescription-vertical-line {
+		    width: 300px;
+
+    }
+  
+  .footer-block__newsletter {
+  	padding: 117px 20px;
+    margin-top: 0;
+  }
+  
+  .banner__image img {
+  	height: 200px;
+  }
+  
+  .philosophy__banner--first-decsription {
+  	padding-bottom: 20px;
+  }
+  
+  .ourmission__box--image {
+  	
+    display: flex;
+    justify-content:center;
+    
+  }
+  
+  .philosophy__banner--sortdescription, .ourmission__box, .process__box--first, .process__box--second, .process__box--third, .process__box--fourth  {
+    margin: 0 20px;
+	}
+  
+  .ourmission__box--image img {
+  	width:100%;
+  }
+  
+  #shopify-section-template--15596897566964__1642588465d53a779c .ourmission__box--title {
+  	    margin-top: 22px;
+  }
+  
+  #shopify-section-template--15596897566964__1642588465d53a779c .ourmission__box--description {
+    margin-top: 27px;
+  }
+  
+  #shopify-section-template--15596897566964__1642588465d53a779c .ourmision {
+    background: -webkit-linear-gradient(top, #F4F6FA 25%, #ffffff 10%);
+  }
+  
+  .ourmission__second--box {
+    padding-top: 21px;
+	}
+  
+  .ourmission__box--image .ourmission__second--image {
+  	width: 100%;
+  }
+
+  .ourjewellery__image img {
+  		height: 300px;
+  }
+  
+  .materials__block {
+    padding-top: 50px;
+  }
+  
+  #shopify-section-template--15596897566964__1642590263e178b5fe .materials__image img, #shopify-section-template--15604048822516__1642663642e4fcadd0 .materials__image img, #shopify-section-template--15604284457204__164267367870b83213 .materials__image img {
+  	height: 234px;
+  }
+  
+  .metarana__box {
+  	position: relative;
+  }
+  .metarana__text--title {
+  	position: absolute;
+    top: 53px;
+    left: 37%;
+  }
+  
+  .metarana__image {
+    margin-right: 20px;
+  }
+  
+  .metarana__text {
+    padding-right: 20px;
+    padding-top: 0px;
+    padding-left: 20px;
+}
+  
+  .process__box--image img {
+  	width: 100%;
+  }
+  
+    #shopify-section-template--15604048822516__1642662239e8469575 .process {
+    background: -webkit-linear-gradient(top,#F4F6FA 17%,#ffffff 10%);
+}
+  
+  #shopify-section-template--15604048822516__1642662239e8469575 .process__box--description, #shopify-section-template--15604284457204__1642673208e73e3607 .process__box--description {
+    padding-top: 27px;
+}
+  
+  #shopify-section-template--15604284457204__1642673208e73e3607 .process__box--second {
+    padding-top: 28px;
+}
+  
+  #shopify-section-template--15604284457204__1642673208e73e3607 .process__box--third {
+    padding-top: 20px;
+}
+  
+  
+  #shopify-section-template--15604284457204__1642673208e73e3607 .process__box--fourth {
+    padding-top: 21px;
+}
+  
+  
+  .process__box--fourth {
+    padding-top: 26px;
+  }
+  
+ #shopify-section-template--15604048822516__1642663642e4fcadd0 .materials__block {
+    padding-top: 25px;
+}
+  
+  .sustainability__box .row>div {
+    padding-top: 50px;
+}
+  
+  .sustainability__box .row>:nth-child(2),.sustainability__box .row>:nth-child(4) {
+  	padding-top:20px;
+  }
+  
+  #shopify-section-template--15604284457204__1642669910efd46173 .sustainability__box {
+    text-align: center;
+}
+
+  .another__title .ourlewellery__collection--title {
+    text-align: center;
+}
+  
+  #shopify-section-template--15604284457204__1642671971c1292c6f .anothertitle__box {
+  	padding-top: 50px;
+  }
+  
+  .anothertitle {
+  text-align:center;
+  }
+  
+  .another__description {
+    padding-left: 0;
+    padding-right: 0;
+}
+  
+  .anothertitle__box--desktop {
+  display: none;
+  }
+  
+  .anothertitle__box--mobile {
+  	display: inherit;
+  }
+  
+  .another__description {
+    padding-top: 0;
+  }
+  
+  .another__image {
+    padding: 46px 0px;
+}
+  
+  #shopify-section-template--15604284457204__1642673208e73e3607 .process__boxes {
+    padding-top: 28px;
+}
+
+  #shopify-section-template--15604284457204__1642673208e73e3607 .process__box--title {
+    padding-top: 24px;
+}
+  
+}
+
+
+@media(max-width:375px) {
+  .process__box--image img {
+    width: 100%;
+  }
+
+  .process__boxes {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .philosophy__banner--title h2 {
+    padding-top: 50px;
+  }
+
+  .process__box--second {
+    padding-top: 23px;
+  }
+  .process__box--fourth {
+    padding-top: 26px;
+  }
+
+  .process__box--first, .process__box--third {
+    padding-top: 20px;
+  }
+  
+
+}
+
+
+
+@media(max-width:375px) {
+
+
+  .sustainability__box {
+    padding:0 20px ;
+  }
+
+  .sustainability__box .row>div {
+    padding-top:0px;
+  }
+  .sustainability__box--text {
+    padding-top:50px;
+  }
+  .sustainability__box--description {
+    padding-top:20px;
+  }
+
+  .philosophy__banner--sortdescription {
+    margin: 0 20px;
+  }
+
+  .another__title .ourlewellery__collection--title {
+    margin:0;
+  }
+
+  .anothertitle__box {
+
+    padding: 50px 20px 0;
+  }
+
+  .another__description {
+
+    padding-right: 0px;
+
+  }
+  
+  
+    .philosophy__banner--sortdescription, .ourmission__box, .process__box--first, .process__box--second, .process__box--third, .process__box--fourth {
+    	 margin: 0 0px; 
+	}
+  
+  #shopify-section-template--15604048822516__16426615267a631386 .philosophy__banner--sortdescription {
+  	margin: 0 20px;
+  }
+}
