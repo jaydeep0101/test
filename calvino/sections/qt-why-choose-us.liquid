@@ -1,0 +1,161 @@
+<section>
+  <div class="chooseus__main">
+    <div class="container">
+      <div class="row chooseus__content">
+        <div class="col-xxl-5 col-xl-7 col-lg-6 col-md-8 custom__padding--all" >
+          <div class="chooseus__title">
+            <span>{{section.settings.title}}</span>
+            <h2>{{ section.settings.sub_title }}</h2>
+          </div>
+        </div>
+        <div class="col-xxl-7 col-xl-5 col-lg-6 col-md-4 custom__padding--all">
+          <a href="#" class="browse-btn f-right">{{ section.settings.btn }}</a>
+        </div>
+      </div>
+      <div class="row chooseus__content--second">
+        <div class="col-xl-5 col-lg-7 col-md-10 custom__padding--all">
+          <div class="chooseus__caption">
+            <div class="row chooseus__caption--content mt-40 chooseus__caption--content-top ">
+              <div class="col-xl-5 col-lg-5 col-md-6 col-sm-5 custom__padding--all">
+                <div class="chooseus__caption--content-single">
+                  <div class="chooseus__caption--content-single-counter">
+                    <span class="counter-title">{{ section.settings.counter }}</span>
+                    <p>{{ section.settings.counter_plus }}</p>
+                  </div>
+                  <div class="chooseus__caption--content-single-descrition">
+                    <p>{{ section.settings.counter_description }}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-5 col-lg-5 col-md-6 col-sm-5 custom__padding--all">
+              	<div class="chooseus__caption--content-single-second">
+                  <div class="chooseus__caption--content-single-counter">
+                    <span class="counter-title">{{ section.settings.counter_second }}</span>
+                  </div>
+                  <div class="chooseus__caption--content-single-descrition">
+                    <p>{{ section.settings.counter_description_second }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-7 col-lg-5 col-md-10 custom__padding--all">
+          <div class="about-right-cap">
+            <p>{{ section.settings.about_right_cap_first }}</p>
+            <p>{{ section.settings.about_right_cap_second }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div classs="brand-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12 custom__padding--all">
+        <div class="brand-active">
+          <div class="slick-list draggable">
+            <!-- Create your own class for the containing div -->
+            <div class="slick-carousel">
+              <!-- Inside the containing div, add one div for each slide -->
+              {% for i in section.blocks %}
+              <div>                
+                <img src="{{i.settings.slick_image | img_url: 'master'}}"  alt="{{i.settings.slick_image.alt}}"/>
+              </div>
+              
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Qt Why Choose Us",
+    "settings": [
+{
+			"type" : "text",
+			"id" : "title",
+			"label" : "title"
+		},
+        {
+          "type" : "text",
+          "id" : "sub_title",
+          "label" : "sub title"
+        },
+		{
+			"type" : "text",
+			"id" : "btn",
+			"label" : "btn"
+		},
+
+
+		{
+			"type" : "text",
+			"id" : "counter",
+			"label" : "counter"
+		},
+{
+			"type" : "text",
+			"id" : "counter_plus",
+			"label" : "counter_plus"
+		},
+{
+			"type" : "text",
+			"id" : "counter_description",
+			"label" : "counter_description"
+		},
+{
+			"type" : "text",
+			"id" : "counter_second",
+			"label" : "counter_second"
+		},
+{
+			"type" : "text",
+			"id" : "counter_description_second",
+			"label" : "counter_description_second"
+		},
+{
+			"type" : "textarea",
+			"id" : "about_right_cap_first",
+			"label" : "about_right_cap_first"
+		},
+{
+			"type" : "text",
+			"id" : "about_right_cap_second",
+			"label" : "about_right_cap_second"
+		}
+],
+"blocks":[
+      {
+         "name":"Why Choose Us",
+         "type":"text",
+         "settings":[
+            {
+               "type":"image_picker",
+               "id":"slick_image",
+               "label":"Slick Image"
+            }
+           
+         ]
+      }
+   ],
+	"presets":[
+      {
+         "name":"Qt Why Choose Us",
+         "category":"Why Choose Us"
+      }
+   ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

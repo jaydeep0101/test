@@ -1,0 +1,102 @@
+
+<section class="services padding__bottom">
+  <div class="services__main">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-5 col-lg-8 col-md-10 custom__padding--all">
+      <div class="services__title">
+        <span class="text-center">{{ section.settings.services_title }}</span>
+        <h2> {{ section.settings.services_sub_title }} </h2>
+      </div>
+        </div>
+      </div>
+      <div class="row">
+        {% for i in section.blocks %}
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 custom__padding--all">
+          <div class="services__box services__box-{{forloop.index}}">
+            <h5> <a href="#">{{i.settings.services_box_title }}</a></h5>
+            <div class="services__box--icon">
+              <img src="{{i.settings.services_box_bg_img | img_url: 'master'}}"  alt="{{i.settings.services_box_bg_img.alt}}"/>
+
+            </div>
+            <div class="services__box--description">
+              <p>{{ i.settings.services_box_sub_title }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="services__shape--one">
+    	<img src="{{section.settings.services_bg_img_first | img_url: 'master'}}"  alt="{{section.settings.services_bg_img_first.alt}}"/>
+    </div>
+    <div class="services__shape--two">
+    	<img src="{{section.settings.services_bg_img_second | img_url: 'master'}}"  alt="{{section.settings.services_bg_img_second.alt}}"/>
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Qt Services",
+    "settings": [
+		{
+			"type" : "text",
+			"id" : "services_title",
+			"label" : "services title"
+		},
+        {
+          "type" : "text",
+          "id" : "services_sub_title",
+          "label" : "services sub title"
+        },
+{
+          "type" : "image_picker",
+          "id" : "services_bg_img_second",
+          "label" : "services Background Image Second"
+        },
+		{
+          "type" : "image_picker",
+          "id" : "services_bg_img_first",
+          "label" : "services Background Image First"
+        }
+
+	],
+	"blocks":[
+      {
+         "name":"Qt Services",
+		 "type":"text",
+         "settings":[
+            {
+               "type":"text",
+               "id":"services_box_title",
+               "label":"services box title"
+            },
+            {
+               "type":"text",
+               "id":"services_box_sub_title",
+               "label":"services box sub title"
+            },
+            {
+               "type":"image_picker",
+               "id":"services_box_bg_img",
+               "label":"services box bg img"
+            }
+         ]
+      }
+   ],
+	"presets":[
+      {
+         "name":"Qt Services",
+         "category":"Services"
+      }
+   ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

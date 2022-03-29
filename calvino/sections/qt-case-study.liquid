@@ -1,0 +1,112 @@
+<section class="study">
+  <div class="study__main">
+    <div class="container">
+      <div class="row study__content">
+        <div class="col-xl-5 col-lg-8 col-md-10 custom__padding--all">
+          <div class="study__title">
+            <span>{{section.settings.title}}</span>
+            <h2>{{ section.settings.sub_title }}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="sutps-active">
+      <button class="slick-prev slick-arrow custom-slick-prev">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <div class="slick-list draggable">
+        <div class="study-carousel slick-carousel">
+          {% for i in section.blocks %}
+          <div>                
+            <img src="{{i.settings.slick_image | img_url: 'master'}}"  alt="{{i.settings.slick_image.alt}}"/>
+            <div class="guest-contents">
+              <p>{{i.settings.slick_title}}</p>
+              <h3><a href="#">{{i.settings.slick_description}}</a></h3>
+            </div>
+          </div>              
+          {% endfor %}
+        </div>
+      </div>
+      <button class="slick-next slick-arrow custom-slick-next">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+      
+   
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </div>
+    
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Qt Study",
+    "settings": [
+	{
+			"type" : "text",
+			"id" : "title",
+			"label" : "title"
+		},
+        {
+          "type" : "text",
+          "id" : "sub_title",
+          "label" : "sub title"
+        }
+],
+
+"blocks":[
+      {
+         "name":"Qt Study",
+         "type":"text",
+         "settings":[
+            {
+               "type":"image_picker",
+               "id":"slick_image",
+               "label":"Slick Image"
+            },
+{
+			"type" : "text",
+			"id" : "slick_title",
+			"label" : "slick title"
+		},
+{
+			"type" : "text",
+			"id" : "slick_description",
+			"label" : "slick description"
+		}
+           
+         ]
+      }
+   ],
+"presets" : [
+	 {
+         "name":"Qt Study",
+         "category":"Study"
+      }
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

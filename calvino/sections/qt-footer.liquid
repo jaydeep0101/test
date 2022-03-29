@@ -1,0 +1,246 @@
+<style>
+  .footer {
+    background-image:url('{{section.settings.footer_bg_img | img_url: 'master'}}');
+    background-size: cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    object-fit:cover;
+  }
+  
+</style>  
+  
+<footer class="footer">
+  <div class="footer-wrapper">
+    <div class="container">
+      <div class="row footer__content">
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-8 custom__padding--all">
+          <div class="footer__inner">
+            <div class="footer__caption--first">
+              <div class="footer__logo">
+                <a href="#">                	
+                  <img src="{{section.settings.footer_logo | img_url: 'master'}}"  alt="{{section.settings.footer_logo.alt}}"/>
+                </a>
+              </div>
+              <div class="footer__title">
+                <div class="footer__para">
+                  <p>{{section.settings.footer_description}}</p>
+                </div>
+                <ul class="footer__icons">
+                	{% for i in section.blocks %}
+                  <li>
+                    <a href="#">
+                      <i class="{{i.settings.footer_social_image}}"></i>
+                    </a>
+                  </li>
+                  	{% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 custom__padding--all">
+          <div class="footer__caption">
+            <div class="footer__caption--title">
+              <h4>{{ linklists.navigation.handle }}</h4>
+              <ul>
+                
+                {% for navigation in linklists.navigation.links %}
+                <li>
+                  <a href="{{ navigation.url }}">{{ navigation.title }}</a>
+                  
+                </li>
+                {% endfor %}
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 custom__padding--all">
+        	<div class="footer__caption">
+            <div class="footer__caption--title">
+              <h4>{{ linklists.Services.handle }}</h4>
+              <ul>
+                
+                {% for navigation in linklists.Services.links %}
+                <li>
+                  <a href="{{ navigation.url }}">{{ navigation.title }}</a>
+                  
+                </li>
+                {% endfor %}
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 custom__padding--all">
+        	<div class="footer__caption">
+            <div class="footer__caption--title">
+              <h4>{{ linklists.support.handle }}</h4>
+              <ul>
+                
+                {% for navigation in linklists.Services.links %}
+                <li>
+                  <a href="{{ navigation.url }}">{{ navigation.title }}</a>
+                  
+                </li>
+                {% endfor %}
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 custom__padding--all">
+        	
+          <div class="footer__caption">
+            <div class="footer__caption--title">
+              <h4>{{section.settings.footer_contact_title}}</h4>
+              <ul>
+                
+                
+                <li>
+                  <a href="">{{section.settings.footer_contact_description}}</a>  
+                </li>
+                <li> 
+                  <a class="contact__email" href="mailto:someone@example.com">{{section.settings.footer_contact_email}}</a>
+                </li>
+                <li> 
+                  <a class="contact__number" href="tel:123-456-7890">{{section.settings.footer_contact_number}}</a>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        	
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom--wrapper">
+    <div class="container">
+      <div class="footer-border">
+        <div class="row">
+          <div class="col-12">
+            <div class="footer__copyright">
+              <p>{{section.settings.copyright}}<i class="{{section.settings.heart}}"></i>{{section.settings.by}}<a href="#">{{section.settings.colorlib}}</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div id="back-top" style="display: block;">
+<a class="wrapper" title="Go to Top" href="#">
+<div class="arrows-container">
+<div class="arrow arrow-one"> </div>
+<div class="arrow arrow-two"> </div>
+</div>
+</a>
+</div>
+
+{% schema %}
+  {
+    "name": "Qt Footer ",
+    "settings": [
+	{
+		"type" : "image_picker",
+		"id"   : "footer_logo",
+		"label": "Footer Logo" 
+	},
+{
+		"type" : "image_picker",
+		"id"   : "footer_bg_img",
+		"label": "Footer Bg Image" 
+	},
+	{
+		"type"	 : "textarea",
+		"id"     : "footer_description",
+		"label"  : "footer Description"
+    },
+
+{
+		"type"	 : "textarea",
+		"id"     : "footer_contact_description",
+		"label"  : "footer Contact Description"
+    },
+
+{
+		"type"	 : "text",
+		"id"     : "footer_contact_email",
+		"label"  : "footer Contact Email"
+    },
+{
+		"type"	 : "text",
+		"id"     : "footer_contact_number",
+		"label"  : "footer Contact Number"
+    },
+{
+		"type"	 : "text",
+		"id"     : "footer_contact_title",
+		"label"  : "footer Contact Title"
+    },
+	{
+		"type"	 : "text",
+		"id"     : "copyright",
+		"label"  : "copyright"
+    },
+	{
+		"type"	 : "text",
+		"id"     : "heart",
+		"label"  : "heart"
+    },
+
+{
+		"type"	 : "text",
+		"id"     : "by",
+		"label"  : "by"
+    },
+{
+		"type"	 : "text",
+		"id"     : "colorlib",
+		"label"  : "Colorlib"
+    }
+
+
+	
+],
+	
+"blocks":[
+      {
+         "name":"Qt Footer",
+         "type":"text",
+         "settings":[
+            {
+               "type":"text",
+               "id":"footer_social_image",
+               "label":"Slick Social Image"
+            }
+         ]
+      }
+   ],
+"presets" : [
+	 {
+         "name":"Qt Footer",
+         "category":"Footer"
+      }
+]
+  }
+{% endschema %}
+
+
+
+
+
+
+
+{% comment %}
+{% for link in linklists.main-menu.links %}
+  <a href="{{ link.url }}">{{ link.title }}</a>
+{% endfor %}
+
+
+
+
+{{ linklists.navigation.handle }}
+{% endcomment %}

@@ -1,0 +1,79 @@
+
+<section class="aboutus">
+  <div class="aboutus__main">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-8 custom__padding--all">
+          <div class="aboutus__main--image">
+          	<img src="{{section.settings.aboutus_main_image | img_url: 'master'}}"  alt="{{section.settings.aboutus_main_image.alt}}"/>
+          </div>
+        </div>
+        <div class="offset-xxl-1 col-xxl-5 col-xl-6 col-lg-6 col-md-9 custom__padding--all">
+          <div class="aboutus__main--caption">
+            <div class="aboutus__main--caption--title">
+              <span>{{ section.settings.aboutus_title }} </span>
+              <h2>{{ section.settings.aboutus_sub_title }}</h2>
+              <p>{{ section.settings.aboutus_description_first }}</p>
+              <p class="mb-40 aboutus__main--caption--title-second-para  ">{{ section.settings.aboutus_description_second }}</p>
+            </div>
+            <a href="#" class="browse-btn">{{section.settings.aboutus_explore_btn}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Qt About Us",
+    "settings": [
+		{
+			"type" : "text",
+			"id" : "aboutus_title",
+			"label" : "aboutus title"
+		},
+        {
+          "type" : "text",
+          "id" : "aboutus_sub_title",
+          "label" : "aboutus sub title"
+        },
+{
+          "type" : "text",
+          "id" : "aboutus_description_first",
+          "label" : "aboutus description first"
+        },
+{
+          "type" : "text",
+          "id" : "aboutus_description_second",
+          "label" : "aboutus description second"
+        },
+{
+          "type" : "text",
+          "id" : "aboutus_explore_btn",
+          "label" : "aboutus explore btn"
+        },
+{
+          "type" : "image_picker",
+          "id" : "aboutus_main_image",
+          "label" : "aboutus main image"
+        }
+		
+
+	
+   ],
+	"presets":[
+      {
+         "name":"Qt About Us",
+         "category":"About Us"
+      }
+   ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
