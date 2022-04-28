@@ -1,0 +1,109 @@
+@font-face{
+    font-family:"Montserrat";
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+
+@font-face{
+    font-family:"Raleway";
+    src: url('../fonts/Raleway-Regular.ttf');
+}
+
+@font-face{
+    font-family:"Mont";
+    src: url('../fonts/Mont-Bold.otf');
+}
+
+
+@font-face{
+    font-family:"NexaDemo";
+    src: url('../fonts/NexaDemo-Bold.ttf');
+}
+
+
+@font-face{
+    font-family:"NexaBold";
+    src: url('../fonts/Nexa-Bold.otf');
+}
+
+@font-face{
+    font-family:"MYRIADPRO";
+    src: url('../fonts/MYRIADPRO-REGULAR.OTF');
+}
+
+@font-face{
+    font-family:"Sintony";
+    src: url('../fonts/Sintony-Regular.ttf');
+}
+
+
+
+$primary-font: Montserrat;
+$raleway: Raleway;
+$mont:Mont;
+$MYRIADPRO:MYRIADPRO;
+$nexaDemo:NexaDemo;
+$nexabold:NexaBold;
+$sintony:Sintony;
+
+// color
+$white:#ffffff;
+$bannerBg: #1a9497;
+$black:#000000;
+$button:#53dcdf;
+
+$primary: #44c5c7;
+// $primary-dark: #112945;
+// $secondary: #EB4E0B;
+
+
+@mixin max-1199 {
+    @media screen and (max-width:1199px) {
+        @content;
+    }
+}
+@mixin max-1024 {
+    @media screen and (max-width:1024px) {
+        @content;
+    }
+}
+@mixin max-991 {
+    @media screen and (max-width:991px) {
+        @content;
+    }
+}
+@mixin max-768 {
+    @media screen and (max-width:768px) {
+        @content;
+    }
+}
+@mixin max-767 {
+    @media screen and (max-width:767px) {
+        @content;
+    }
+}
+@mixin max-575 {
+    @media screen and (max-width:575px) {
+        @content;
+    }
+}
+@mixin max-420 {
+    @media screen and (max-width:420px) {
+        @content;
+    }
+}
+@mixin max-360 {
+    @media screen and (max-width:360px) {
+        @content;
+    }
+}
+@mixin max-320 {
+    @media screen and (max-width:320px) {
+        @content;
+    }
+}
+
+
+
+
+
+
